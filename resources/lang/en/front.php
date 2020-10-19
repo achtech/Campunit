@@ -24,7 +24,13 @@ return [
     'menu_take-lease' => 'Take on lease',
     'menu_insert_vehicule' => 'List your Camper',
     'menu_magazine' => 'Magazine',
-    'menu_login' => 'Login',
+    'menu_login' => 'Login', 
+    'menu_rent_motorhome' => 'Rent a motorhome',
+    'menu_rent_campervan' =>'Rent a campervan',
+    'menu_rent_caravan' =>'Rent a caravan',
+    'menu_rent_other' =>'Rent a other',
+    'menu_register' =>'Register',
+    'menu_rent' =>'Rent',
 
     /*
     -----------------------Slider ----------
