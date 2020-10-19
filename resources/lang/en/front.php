@@ -61,4 +61,5 @@ return [
     ----------------------Content ------------------
     */
     'content_most_visited' => 'Most Visited Campers',
+    'title_categories' =>'the right one for camping',
 ];

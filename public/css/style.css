@@ -11250,7 +11250,7 @@ span.like-icon {
 /* Small Category Boxes
 ------------------------------------- */
 .categories-boxes-container {
-	width: calc(100% + 20px);
+	width: 100%;
 	left: -20px;
 	position: relative;
 	display: flex;
@@ -11301,6 +11301,19 @@ span.like-icon {
 
 .category-small-box:hover h4 { color: #fff; }
 
+.img-box {
+    height: 350px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 90;
+    margin: 10px 0;
+    border-radius: 3px;
+}
+.category-small-box .img-box {
+    height: 290px;
+}
 
 /* Media Queries For Small Category Boxes */
 @media (max-width: 768px) {

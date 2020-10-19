@@ -11,6 +11,31 @@
 
 	</div>
 </div>
+<!-- Content
+================================================== -->
+<div class="container">
+	<div class="row">
+
+		<div class="col-md-12">
+			<h3 class="headline centered margin-top-75">
+				<strong class="headline-with-separator">{{trans('front.title_categories')}}</strong>
+			</h3>
+		</div>
+
+		<div class="col-md-12">
+			<div class="categories-boxes-container margin-top-5 margin-bottom-30">
+				@foreach($datas as $item)
+					<!-- Box -->
+					<a href="listings-list-with-sidebar.html" class="category-small-box">
+						<img src="images/icon-campers/{{$item->image}}"  alt="">
+						<h4>{{App\Http\Controllers\DashboardController::getLabel('camper_categories',$item->id,'label_en')}}</h4>
+						<span class="category-box-counter">12</span>
+					</a>
+				@endforeach	
+			</div>
+		</div>
+	</div>
+</div>
 <!-- Category Boxes / End -->
 <!-- Fullwidth Section -->
 <section class="fullwidth margin-top-65 padding-top-75 padding-bottom-70" data-background-color="#f8f8f8">
@@ -54,6 +79,7 @@
 	</div>
 
 </section>
+
 <!-- Fullwidth Section / End -->
 <section class="fullwidth padding-top-75 padding-bottom-30" data-background-color="#fff">
 	<!-- Info Section -->
