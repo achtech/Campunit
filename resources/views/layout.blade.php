@@ -12,7 +12,7 @@
 ================================================== -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/main-color.css" id="colors">
-
+<link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 
 <body class="transparent-header">
@@ -62,9 +62,168 @@
 
 						<li><a href="#">{{trans('front.menu_magazine')}}</a></li>
 						
-						<li><a href="#">{{trans('front.menu_login')}}</a></li>
+						<li>
+							<a  id="myBtn">{{trans('front.menu_login')}}</a>
+							<div id="myModal" class="modal">
 
-						<li><a href="#">{{trans('front.menu_register')}}</a></li>
+								<!-- Modal content -->
+								<div class="modal-content" style="background: #f4f4f4;">
+									<span class="close">&times;</span>
+									<header class="modal-header">
+										<div class="controls"><!---->
+											 <a  href="#" class="control-right">
+												</a>
+											</div> 
+											<div  class="titles-container">
+												<h3 class="text-center">{{trans('front.to_connect')}}</h3></div>
+									</header>
+									<div class="modal-body">
+											<div class="container">
+												<form>
+												
+													<div  class="form-group">
+														<label class="sr-only">
+															{{trans('front.email_address')}}
+													  	</label>
+														<input  type="text" placeholder="Adresse e-mail" autocomplete="username" class="login-username form-control" style="width:727px !important;">
+													</div>
+													<div  class="form-group">
+														<label class="sr-only">
+															{{trans('front.password')}}
+													  	</label>
+														<input  type="password" placeholder="Adresse e-mail" autocomplete="username" class="login-username form-control" style="width:727px !important;">
+													</div>
+													<div >
+														<button type="button" class="btn btn-primary btn-block w-727 connexion">
+															{{trans('front.to_connect')}}
+														</button>
+													</div>
+													<a style="color: #f15424;" id="forget-password"><small >{{trans('front.forget_password')}}</small></a>
+													<div id="passwordModel" class="modal">
+														<div class="modal-content" style="background: #f4f4f4;margin-top: 82px;">
+															<span class="close-forget-password-model">&times;</span>
+														
+														<div class="titles-container"><h3 class="text-center">{{trans('front.to_connect')}}</h3></div>
+														
+															<form>
+																<div class="form-group"><label  class="sr-only">
+																	Email address
+																  </label> <input type="text" placeholder="Email address" autocomplete="username" class=" form-control w-727" >
+																</div>
+																<button type="button" class="btn btn-primary connexion w-727"><!---->
+																	{{trans('front.reset_password_link')}}
+																</button>
+															</form>
+															<a style="color: #f15424;" id="forget-password"><small >{{trans('front.register')}}</small></a>
+	
+														</div>
+													</div>
+														
+													<div class="hr-bar w-727">
+														<span  class="hr-bar-content" style="color: rgb(204, 204, 204);">
+															<small >{{trans('front.or')}}</small>
+														</span>
+													</div>
+													<button class="btn btn-primary w-727 facebook" >
+														{{trans('front.facebook_connexion')}}
+													</button>
+												</form>
+											</div>
+									</div>
+									<br/>
+									<div class="create-compte">
+										{{trans('front.create_account')}}<a class="inscription" href="#" id="register" >{{trans('front.register')}}</a>
+										<div id="registerModel" class="modal">
+											<div class="modal-content" style="background: #f4f4f4;margin-top: 82px;">
+												<span class="close-second-model">&times;</span>
+												<div class="titles-container">
+													<h4 class="text-center">{{trans('front.create_an_account')}}</h4> 
+													<h3 class="text-center">{{trans('front.welcome')}}</h3>
+													<br/>
+													<div class="modal-body"> 
+														<div>
+														<button id="registrationEmail" class="btn btn-primary w-727 gmail">
+															<i class="far fa-envelope-square"></i>{{trans('front.register_email_address')}}
+														</button>
+														<div id="registerWithEmail" class="modal">
+															<div class="modal-content" style="background: #f4f4f4;margin-top: 82px;">
+																<div class="controls">
+																	<a class="control-left"><i class="fa fa-angle-left icons-design go-back"></i></a>
+																	<span class="close-third-model">&times;</span>
+																</div>
+																<div class="titles-container">
+																	<h1 class="text-center">{{trans('front.create_an_account')}}</h1> 
+																	<h4 class="text-center">{{trans('front.register_with_email_address')}}</h4>
+																	<form>
+																		<div class="form-group">
+																				<label  class="sr-only">
+																				{{trans('front.first_name')}}
+																			</label> 
+																			<input   type="text" placeholder="First Name" class="form-control">
+																		</div>
+																		<div class="form-group">
+																			<label  class="sr-only">
+																			{{trans('front.last_name')}}
+																			</label> 
+																			<input   type="text" placeholder="Last Name" class="form-control">
+																		</div>
+																	<div class="form-group">
+																		<label  class="sr-only">
+																		{{trans('front.email_add')}}
+																		</label> 
+																		<input type="text" placeholder="Email Address" class="form-control">
+																	</div>
+																	<label  >
+																		<i class="fas fa-info-circle"></i>{{trans('front.minimum_length')}}
+																	</label>
+																	<div class="form-group">
+																		<label  class="sr-only">
+																		{{trans('front.password')}}
+																		</label> 
+																		<input type="password" placeholder="Password" class="form-control">
+																	</div>
+																	<div class="form-group">
+																		<label style="display: flex;"><input style="width: auto;" type="checkbox" class="form-control">
+																		<span style="margin-top: 12px;">{{trans('front.agree')}} <a style="display: contents;" class="inscription" href="#" id="register" >{{trans('front.service_terms')}}</a>{{trans('front.and')}} <a style="display: contents;" class="inscription" href="#" id="register" >{{trans('front.privacy_policy')}}</a></span>
+																		</label>
+																	</div>
+																	<button  type="submit" class="btn w-727 connexion">
+																		{{trans('front.sign_up')}}
+																	  </button>
+																	</form>
+																<div class="create-compte" style="bottom: -19px;position: relative;">
+																	{{trans('front.existed_account')}}<a class="inscription" href="#" id="register" >{{trans('front.to_connect')}}</a>
+																</div>
+																</div>
+																
+														  
+														</div>
+							
+													</div>	</div>
+														<div class="hr-bar">
+															<span  class="hr-bar-content" >
+																<small>or</small>
+															</span>
+														</div> 
+														<button class="btn btn-primary facebook w-727">
+															{{trans('front.register_facebook')}}
+														</button> 
+														<br/><br/><br/>
+												</div>
+												<div class="create-compte" style="bottom: -19px;position: relative;">
+													{{trans('front.existed_account')}}<a class="inscription" href="#" id="register" >{{trans('front.to_connect')}}</a>
+												</div>
+												</div>
+												
+										  
+										</div>
+			
+									</div>	
+								</div>
+							  
+							</div>
+						</li>
+						<li><a href="#" >{{trans('front.menu_register')}}</a></li>
 
 					</ul>
 				</nav>
@@ -293,8 +452,77 @@
 <script src="scripts/leaflet-autocomplete.js"></script>
 <script src="scripts/leaflet-control-geocoder.js"></script>
 
-
-<!-- Typed Script -->
+<script>
+	var modal = document.getElementById("myModal");
+	var btn = document.getElementById("myBtn");
+	var span = document.getElementsByClassName("close")[0];
+	btn.onclick = function() {
+	  modal.style.display = "block";
+	}
+	span.onclick = function() {
+	  modal.style.display = "none";
+	}
+	
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+		modal.style.display = "none";
+	  }
+	}
+	</script>
+	<script>
+		var registerModel = document.getElementById("registerModel");
+		var registerBtn = document.getElementById("register");
+		var span = document.getElementsByClassName("close-second-model")[0];
+		registerBtn.onclick = function() {
+		  registerModel.style.display = "block";
+		}
+		span.onclick = function() {
+		  registerModel.style.display = "none";
+		}
+		window.onclick = function(event) {
+		  if (event.target == registerModel) {
+			registerModel.style.display = "none";
+		  }
+		}
+	</script>
+	<script>
+		var emailModel = document.getElementById("registerWithEmail");
+		var emailBtn = document.getElementById("registrationEmail");
+		var span = document.getElementsByClassName("close-third-model")[0];
+		var back=document.getElementsByClassName("go-back")[0];
+		emailBtn.onclick = function() {
+		  emailModel.style.display = "block";
+		}
+		span.onclick = function() {
+		  emailModel.style.display = "none";
+		}
+		back.onclick = function() {
+		  emailModel.style.display = "none";
+		}
+		window.onclick = function(event) {
+		  if (event.target == emailModel) {
+			emailModel.style.display = "none";
+		  }
+		}
+	</script>
+	<script>
+		var paswwordModel = document.getElementById("passwordModel");
+		var passwordBtn = document.getElementById("forget-password");
+		var span = document.getElementsByClassName("close-third-model")[0];
+		passwordBtn.onclick = function() {
+		  paswwordModel.style.display = "block";
+		}
+		span.onclick = function() {
+		  paswwordModel.style.display = "none";
+		}
+		window.onclick = function(event) {
+		  if (event.target == paswwordModel) {
+			paswwordModel.style.display = "none";
+		  }
+		}
+</script>
+	<!-- Typed Script -->
 <script type="text/javascript" src="scripts/typed.js"></script>
 <script>
 var typed = new Typed('.typed-words', {
@@ -339,7 +567,6 @@ strings: [""," "," "],
 		
 </div>
 <!-- Style Switcher / End -->
-
 
 </body>
 </html>
