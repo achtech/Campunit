@@ -24,8 +24,8 @@
 						<div class="main-search-input-item">
 							<select data-placeholder="All Categories" class="chosen-select" name="categorie">
 								<option>{{trans('front.slider_categories')}}</option>
-								@foreach($datas as $item)	
-								<option value="{{$item -> id}}">{{$item -> label_en }}</option>
+								@foreach($categories as $cat)	
+								<option value="{{$cat -> id}}">{{App\Http\Controllers\Controller::getLabelFromObject($cat) }}</option>
 								@endforeach
 							</select>
 						</div>

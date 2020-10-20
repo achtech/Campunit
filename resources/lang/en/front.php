@@ -62,4 +62,10 @@ return [
     */
     'content_most_visited' => 'Most Visited Campers',
     'title_categories' =>'the right one for camping',
+    'content_user_review' =>'This is how it goes on vacation',
+    'content_text_find_place' =>'Just look for the place where you would like to pick up your camper. You will be shown the nearest campers in this area and you can easily choose one of your choice.',
+    'choose_data_request'=>'If you have selected a camper, you will see all further details on the overview. Does the camper suit you? Then choose your preferred date and send the request to the landlord.',
+    'receive_request'=>'Now you just need a little patience. As soon as the landlord has received your request, he can confirm it and nothing stands in the way of your camping holiday. Have fun with your adventure.',
+    'our_bloc'=>'From The Blog',
+
 ];

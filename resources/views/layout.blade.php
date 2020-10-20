@@ -52,10 +52,9 @@
 						<li><a class="current" href="#">{{trans('front.menu_home')}}</a></li>
 						<li><a  href="#">{{trans('front.menu_rent')}}</a>
 							<ul>
-								<li><a href="index-3.html">{{trans('front.menu_rent_motorhome')}}</a></li>
-								<li><a href="index-4.html">{{trans('front.menu_rent_campervan')}}</a></li>
-								<li><a href="index-5.html">{{trans('front.menu_rent_caravan')}}</a></li>
-								<li><a href="index-6.html">{{trans('front.menu_rent_other')}}</a></li>
+								@foreach($categories as $cat)
+									<li><a href="index-3.html">{{App\Http\Controllers\Controller::getLabelFromObject($cat)}}</a></li>
+								@endforeach
 							</ul>
 						</li>
 						<li><a href="#">{{trans('front.menu_insert_vehicule')}}</a></li>

@@ -12,15 +12,11 @@ class DashboardController extends Controller
     //
     public function index(){
         
-        $datas = CamperCategory::paginate(10);
-        $dataCamper = Camper::paginate(10);
+        $categories = DB::table('camper_categories')->paginate(10);
+        $campers = DB::table('campers')->paginate(10);
 
-        return view('dashboard')->with('datas', $datas)->with('dataCamper', $dataCamper);
+        return view('dashboard')->with('categories', $categories)->with('campers', $campers);
     }
 
-    public static function getLabel($table, $id,$label)
-    {
-        $data = DB::table($table)->find($id);
-        return $data->$label;
-    }
+    
 }
