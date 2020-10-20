@@ -15,7 +15,7 @@
 ================================================== -->
 
 <!-- Fullwidth Section -->
-<section class="fullwidth margin-top-65 padding-top-75 padding-bottom-70" data-background-color="#fff">
+<section class="fullwidth margin-top-65  padding-bottom-70" data-background-color="#fff">
 
 	<div class="container">
 		<div class="row">
