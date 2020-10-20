@@ -87,9 +87,10 @@
 							<li><a href="index.html"><i class="sl sl-icon-power"></i> Logout</a></li>
 						</ul>
 					</div>
+					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang current">EN</a>
+					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang">DE</a>
+					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang">FR</a>
 
-
-					<a href="dashboard-add-listing.html" class="button border with-icon">Add Listing <i class="sl sl-icon-plus"></i></a>
 				</div>
 			</div>
 			<!-- Right Side Content / End -->

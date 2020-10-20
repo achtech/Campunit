@@ -86,7 +86,7 @@
 </div>
 <!-- Category Boxes / End -->
 <!-- Info Section -->
-<section class="fullwidth padding-top-75 padding-bottom-70" data-background-color="#fff">
+<section class="fullwidth padding-top-75 padding-bottom-70 margin-top-section" data-background-color="#fff">
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
