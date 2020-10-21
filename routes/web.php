@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ListYourCamperController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('lang/{lang}', function ($lang) {
@@ -7,5 +9,6 @@ Route::get('lang/{lang}', function ($lang) {
     return back();
 });
 Route::group(['middleware' => 'Lang'], function () {
-    Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/listyourcamper', [ListYourCamperController::class, 'index'])->name('listyourcamper');
 });

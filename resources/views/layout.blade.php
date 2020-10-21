@@ -27,13 +27,13 @@
 	<!-- Header -->
 	<div id="header">
 		<div class="container">
-			
+
 			<!-- Left Side Content -->
 			<div class="left-side">
-				
+
 				<!-- Logo -->
 				<div id="logo">
-					<a href="index.html"><img src="images/logo-icon.png" data-sticky-logo="images/logo-icon.png" alt=""></a>
+					<a href="/"><img src="images/logo-icon.png" data-sticky-logo="images/logo-icon.png" alt=""></a>
 				</div>
 
 				<!-- Mobile Navigation -->
@@ -49,7 +49,7 @@
 				<nav id="navigation" class="style-1">
 					<ul id="responsive">
 
-						<li><a class="current" href="#">{{trans('front.menu_home')}}</a></li>
+						<li><a class="{{ $activePage == 'home' ? ' current' : '' }}" href="/">{{trans('front.menu_home')}}</a></li>
 						<li><a  href="#">{{trans('front.menu_rent')}}</a>
 							<ul>
 								@foreach($categories as $cat)
@@ -57,10 +57,10 @@
 								@endforeach
 							</ul>
 						</li>
-						<li><a href="#">{{trans('front.menu_insert_vehicule')}}</a></li>
+						<li><a class="{{ $activePage == 'listyourcamper' ? ' current' : '' }}" href="/listyourcamper">{{trans('front.menu_insert_vehicule')}}</a></li>
 
 						<li><a href="#">{{trans('front.menu_magazine')}}</a></li>
-						
+
 						<li><a href="#">{{trans('front.menu_login')}}</a></li>
 
 						<li><a href="#">{{trans('front.menu_register')}}</a></li>
@@ -69,7 +69,7 @@
 				</nav>
 				<div class="clearfix"></div>
 				<!-- Main Navigation / End -->
-				
+
 			</div>
 			<!-- Left Side Content / End -->
 
@@ -140,7 +140,7 @@
 										<label for="remember-me">Remember Me</label>
 									</div>
 								</div>
-								
+
 							</form>
 						</div>
 
@@ -148,14 +148,14 @@
 						<div class="tab-content" id="tab2" style="display: none;">
 
 							<form method="post" class="register">
-								
+
 							<p class="form-row form-row-wide">
 								<label for="username2">Username:
 									<i class="im im-icon-Male"></i>
 									<input type="text" class="input-text" name="username" id="username2" value="" />
 								</label>
 							</p>
-								
+
 							<p class="form-row form-row-wide">
 								<label for="email2">Email Address:
 									<i class="im im-icon-Mail"></i>
@@ -178,7 +178,7 @@
 							</p>
 
 							<input type="submit" class="button border fw margin-top-10" name="register" value="Register" />
-	
+
 							</form>
 						</div>
 
@@ -240,10 +240,10 @@
 					<li><a href="#">{{trans('front.footer_imprint')}}</a></li>
 				</ul>
 				<div class="clearfix"></div>
-			</div>		
+			</div>
 
 		</div>
-		
+
 		<!-- Copyright -->
 		<div class="row">
 			<div class="col-md-12">
@@ -315,7 +315,7 @@ strings: [""," "," "],
 
 <div id="style-switcher">
 	<h2>Color Switcher <a href="#"><i class="sl sl-icon-settings"></i></a></h2>
-	
+
 	<div>
 		<ul class="colors" id="color1">
 			<li><a href="#" class="main" title="Main"></a></li>
@@ -336,7 +336,7 @@ strings: [""," "," "],
 			<li><a href="#" class="olive" title="Olive"></a></li>
 		</ul>
 	</div>
-		
+
 </div>
 <!-- Style Switcher / End -->
 
