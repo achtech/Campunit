@@ -2449,9 +2449,9 @@ body .typed-cursor.typed-cursor--blink.typed-fade-out {
     height: auto;
 }
 
-.transparent-header .main-search-container:before {
+/*.transparent-header .main-search-container:before {
     background: rgba(0, 0, 0, 0.5);
-}
+}*/
 
 .transparent-header #header:not(.cloned) {
     background: rgba(51, 51, 51, 0);
