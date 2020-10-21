@@ -47,7 +47,7 @@
 						</a>
 					</div>
 				<!-- Listing Item / End -->
-				@endforeach	
+				@endforeach
 				</div>
 
 			</div>
@@ -68,7 +68,7 @@
 
 		<div class="col-md-12">
 			<div class="row">
-				
+
 				@foreach($categories as $category)
 					<!-- Box -->
 					<div class="col-md-3 alternative-imagebox">
@@ -78,8 +78,8 @@
 							<span class="blog-item-tag">12 Listings</span>
 						</a>
 					</div>
-					
-				@endforeach	
+
+				@endforeach
 			</div>
 		</div>
 	</div>

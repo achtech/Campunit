@@ -70,5 +70,16 @@ return [
     'receive_request' => 'Now you just need a little patience. As soon as the landlord has received your request, he can confirm it and nothing stands in the way of your camping holiday. Have fun with your adventure.',
     'our_bloc' => 'From The Blog',
     'Renting out your camper & equipments online' => 'Renting out your camper & equipments online',
-
+    'Create profile' => 'Create profile',
+    'Define availabilty' => 'Define availabilty',
+    'Reply to booking requests' => 'Reply to booking requests',
+    'Rent out Now' => 'Rent out Now',
+    'advantages' => 'Advantages',
+    'Verify' => 'Verify',
+    'Register for free' => 'Register for free',
+    'Insurance' => 'Insurance',
+    'You decide who can hire your camper at what price' => 'You decide who can hire your camper at what price',
+    'Register your camper for free. We only receive a service fee after a successfil booking' => 'Register your camper for free. We only receive a service fee after a successfil booking',
+    'insurance_desc' => "Together with Baloise we're offering an insurance solution so you can rent out without worries",
+    'What our vehicle owners say' => 'What our vehicle owners say',
 ];
