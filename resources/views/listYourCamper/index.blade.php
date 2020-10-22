@@ -1,7 +1,7 @@
 
-@extends('layout',['activePage' => 'listyourcamper'])
+@extends('layout',['activePage' => 'camper'])
 @section('banner')
-    @include('listYourCamper/sliderList')
+    @include('camper/sliderList')
 @endsection
 @section('content')
 <!-- Content

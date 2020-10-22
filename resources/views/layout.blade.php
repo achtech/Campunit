@@ -57,7 +57,7 @@
 								@endforeach
 							</ul>
 						</li>
-						<li><a class="{{ $activePage == 'listyourcamper' ? ' current' : '' }}" href="/listyourcamper">{{trans('front.menu_insert_vehicule')}}</a></li>
+						<li><a class="{{ $activePage == 'camper' ? ' current' : '' }}" href="/camper">{{trans('front.menu_insert_vehicule')}}</a></li>
 
 						<li><a href="#">{{trans('front.menu_magazine')}}</a></li>
 

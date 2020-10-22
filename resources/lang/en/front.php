@@ -22,7 +22,7 @@ return [
      */
     'menu_home' => 'Home',
     'menu_take-lease' => 'Take on lease',
-    'menu_insert_vehicule' => 'List your Camper',
+    'menu_insert_vehicule' => 'Rent out',
     'menu_magazine' => 'Magazine',
     'menu_login' => 'Login',
     'menu_rent_motorhome' => 'Rent a motorhome',
@@ -60,7 +60,7 @@ return [
     'footer_reserved_right' => 'All Rights Reserved',
 
     /*
-    ----------------------Content ------------------
+    ---------------------- Home ------------------
      */
     'content_most_visited' => 'Most Visited Campers',
     'title_categories' => 'the right one for camping',
@@ -69,17 +69,21 @@ return [
     'choose_data_request' => 'If you have selected a camper, you will see all further details on the overview. Does the camper suit you? Then choose your preferred date and send the request to the landlord.',
     'receive_request' => 'Now you just need a little patience. As soon as the landlord has received your request, he can confirm it and nothing stands in the way of your camping holiday. Have fun with your adventure.',
     'our_bloc' => 'From The Blog',
-    'Renting out your camper & equipments online' => 'Renting out your camper & equipments online',
-    'Create profile' => 'Create profile',
-    'Define availabilty' => 'Define availabilty',
-    'Reply to booking requests' => 'Reply to booking requests',
-    'Rent out Now' => 'Rent out Now',
-    'advantages' => 'Advantages',
-    'Verify' => 'Verify',
-    'Register for free' => 'Register for free',
-    'Insurance' => 'Insurance',
-    'You decide who can hire your camper at what price' => 'You decide who can hire your camper at what price',
-    'Register your camper for free. We only receive a service fee after a successfil booking' => 'Register your camper for free. We only receive a service fee after a successfil booking',
-    'insurance_desc' => "Together with Baloise we're offering an insurance solution so you can rent out without worries",
-    'What our vehicle owners say' => 'What our vehicle owners say',
+
+    /*
+    ---------------------- Rent out Camper page ------------------
+     */
+    'title_1' => 'Earn money with your camper',
+    'text_content_1_1' => 'Share your camper with people from all over the world. Campunite makes it as easy as possible for you. We offer simple means of payment such as PayPal, Visa and Mastercard. Read the steps and get started!',
+    'text_content_1_2' => 'Greetings to your Campunite team',
+    'learn_more' => 'Leanr more',
+    'title_2' => 'Create an account',
+    'text_content_2_1' => 'First you need a camper. You have a? Great then go ...',
+    'text_content_2_2' => 'Now create your account to get started. Fill in the details and start sharing your camper.',
+    'title_3' => 'Upload your camper',
+    'text_content_3' => "When you've created your account, you can start creating an entry for your camper. Let people know where to find your camper, show you some photos, and set a price.",
+    'title_4' => 'Done!',
+    'text_content_4' => 'Now all you have to do is wait. If someone is interested in serving campers, you will be notified and you can clarify details via the chat function if you wish.',
+    '' => '',
+
 ];
