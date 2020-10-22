@@ -31,7 +31,18 @@ return [
     'menu_rent_other' =>'Rent a other',
     'menu_register' =>'Register',
     'menu_rent' =>'Rent',
-
+    'menu_user_panel' => 'User Panel',
+    'menu_panel_camper' =>'My Campers',
+    'menu_panel_message' =>'Messages',
+    'menu_panel_notification' =>'Notifications',
+    'menu_panel_booking' => 'Bookings',
+    'menu_panel_wallet' =>'Wallet',
+    'menu_panel_review' =>'Reviews',
+    'menu_panel_profil' =>'My profil',
+    'menu_panel_logout' =>'Logout',
+    'menu_panel_invoice' =>'Invoice',
+    'menu_panel_dashboard_navigator'=>'Dashboard Navigation',
+    'menu_panel_account'=>'My Account',
     /*
     -----------------------Slider ----------
     */
@@ -58,7 +69,7 @@ return [
     'footer_reserved_right' => 'All Rights Reserved',
 
     /*
-    ----------------------Content ------------------
+    ---------------------- Home ------------------
     */
     'content_most_visited' => 'Most Visited Campers',
     'title_categories' =>'the right one for camping',

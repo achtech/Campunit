@@ -58,12 +58,21 @@
 							</ul>
 						</li>
 						<li><a href="#">{{trans('front.menu_insert_vehicule')}}</a></li>
-
-						<li><a href="#">{{trans('front.menu_magazine')}}</a></li>
 						
-						<li><a href="#">{{trans('front.menu_login')}}</a></li>
-
-						<li><a href="#">{{trans('front.menu_register')}}</a></li>
+						<li><a href="#">{{trans('front.menu_user_panel')}}</a>
+							<ul>
+								<li><a href="dashboard-my-listings.html">{{trans('front.menu_panel_camper')}}</a></li>
+								<li><a href="dashboard-messages.html">{{trans('front.menu_panel_message')}}</a></li>
+								<li><a href="dashboard-messages.html">{{trans('front.menu_panel_notification')}}</a></li>
+								<li><a href="dashboard-bookings.html">{{trans('front.menu_panel_booking')}}</a></li>
+								<li><a href="dashboard-wallet.html">{{trans('front.menu_panel_wallet')}}</a></li>
+								<li><a href="dashboard-reviews.html">{{trans('front.menu_panel_review')}}</a></li>
+								<li><a href="{{route('clients.user.profile')}}">{{trans('front.menu_panel_profil')}}</a></li>
+								<li><a href="dashboard-my-profile.html">{{trans('front.menu_panel_logout')}}</a></li>
+								<li><a href="dashboard-invoice.html">{{trans('front.menu_panel_invoice')}}</a></li>
+							</ul>
+						</li>
+						
 
 					</ul>
 				</nav>
@@ -81,10 +90,10 @@
 					<div class="user-menu">
 						<div class="user-name"><span><img src="images/dashboard-avatar.jpg" alt=""></span>Hi, Tom!</div>
 						<ul>
-							<li><a href="dashboard.html"><i class="sl sl-icon-settings"></i> Dashboard</a></li>
-							<li><a href="dashboard-messages.html"><i class="sl sl-icon-envelope-open"></i> Messages</a></li>
-							<li><a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i> Bookings</a></li>
-							<li><a href="index.html"><i class="sl sl-icon-power"></i> Logout</a></li>
+							<li><a href="dashboard.html"><i class="sl sl-icon-settings"></i> {{trans('front.menu_panel_profil')}}</a></li>
+							<li><a href="dashboard-messages.html"><i class="sl sl-icon-envelope-open"></i> {{trans('front.menu_panel_message')}}</a></li>
+							<li><a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i> {{trans('front.menu_panel_booking')}}</a></li>
+							<li><a href="index.html"><i class="sl sl-icon-power"></i> {{trans('front.menu_panel_logout')}}</a></li>
 						</ul>
 					</div>
 					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang current">EN</a>

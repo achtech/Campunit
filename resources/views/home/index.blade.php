@@ -1,7 +1,7 @@
 
 @extends('layout',['activePage' => 'home'])
 @section('banner')
-    @include('slider')
+@include('slider')
 @endsection
 @section('content')
 <!-- Content
@@ -61,7 +61,7 @@
 	<div class="row">
 
 		<div class="col-md-12">
-			<h3 class="headline centered margin-top-75">
+			<h3 class="headline centered">
 				<strong class="headline-with-separator">{{trans('front.title_categories')}}</strong>
 			</h3>
 		</div>
@@ -121,7 +121,9 @@
 			</div>
 		</div>
 	</div>
-
+	<div class="col-md-12 centered-content">
+		<a href="pages-blog.html" class="button border margin-top-10">View Blog</a>
+	</div>
 </div>
 </section>
 <!-- Info Section / End -->
