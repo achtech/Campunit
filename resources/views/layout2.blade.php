@@ -3,7 +3,7 @@
 
 <!-- Basic Page Needs
 ================================================== -->
-<title>Listeo</title>
+<title>Campunit</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -72,6 +72,7 @@
 								<li><a href="dashboard-invoice.html">{{trans('front.menu_panel_invoice')}}</a></li>
 							</ul>
 						</li>
+					</ul>
 				</nav>
 				<div class="clearfix"></div>
 				<!-- Main Navigation / End -->

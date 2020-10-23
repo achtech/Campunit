@@ -83,19 +83,10 @@
 			<!-- Left Side Content / End -->
 
 
-			<!-- Right Side Content / End -->
+						<!-- Right Side Content / End -->
 			<div class="right-side">
 				<div class="header-widget">
-					<!-- User Menu -->
-					<div class="user-menu">
-						<div class="user-name"><span><img src="images/dashboard-avatar.jpg" alt=""></span>Hi, Tom!</div>
-						<ul>
-							<li><a href="dashboard.html"><i class="sl sl-icon-settings"></i> {{trans('front.menu_panel_profil')}}</a></li>
-							<li><a href="dashboard-messages.html"><i class="sl sl-icon-envelope-open"></i> {{trans('front.menu_panel_message')}}</a></li>
-							<li><a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i> {{trans('front.menu_panel_booking')}}</a></li>
-							<li><a href="index.html"><i class="sl sl-icon-power"></i> {{trans('front.menu_panel_logout')}}</a></li>
-						</ul>
-					</div>
+					<a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim"><i class="sl sl-icon-login"></i> Sign In</a>
 					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang current">EN</a>
 					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang">DE</a>
 					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang">FR</a>
@@ -149,7 +140,7 @@
 										<label for="remember-me">Remember Me</label>
 									</div>
 								</div>
-								
+
 							</form>
 						</div>
 
@@ -157,14 +148,14 @@
 						<div class="tab-content" id="tab2" style="display: none;">
 
 							<form method="post" class="register">
-								
+
 							<p class="form-row form-row-wide">
 								<label for="username2">Username:
 									<i class="im im-icon-Male"></i>
 									<input type="text" class="input-text" name="username" id="username2" value="" />
 								</label>
 							</p>
-								
+
 							<p class="form-row form-row-wide">
 								<label for="email2">Email Address:
 									<i class="im im-icon-Mail"></i>
@@ -187,7 +178,7 @@
 							</p>
 
 							<input type="submit" class="button border fw margin-top-10" name="register" value="Register" />
-	
+
 							</form>
 						</div>
 
@@ -211,58 +202,7 @@
 @yield('content')
 <!-- Footer
 ================================================== -->
-<div id="footer" class="sticky-footer">
-	<!-- Main -->
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 col-sm-6">
-				<h4>{{trans('front.footer_title_presentation')}}</h4>
-				<p>{{trans('front.footer_presentation')}}</p>
-			</div>
-			<div class="col-md-3  col-sm-6">
-				<h4>{{trans('front.footer_social')}}</h4>
-				<ul class="social-icons margin-top-20">
-					<li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
-					<li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
-					<li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
-					<li><a class="vimeo" href="#"><i class="icon-vimeo"></i></a></li>
-				</ul>
-
-			</div>
-			<div class="col-md-3  col-sm-12">
-				<h4>{{trans('front.footer_paiement_methods')}}</h4>
-				<ul class="social-icons margin-top-20">
-					<li><img width="50" height="180" style="max-width: 100%;height: auto;"  src="images/paiement-methods/Paypal-Icon.png" /></li>
-					<li><img width="50" height="180" style="max-width: 100%;height: auto;"  src="images/paiement-methods/Mastercard-Icon.png" /></li>
-					<li><img width="50" height="180" style="max-width: 100%;height: auto;"  src="images/paiement-methods/Visa-Icon.png" /></li>
-					<li><img width="50" height="180" style="max-width: 100%;height: auto;"  src="images/paiement-methods/Maestro-Icon.png" /></li>
-				</ul>
-
-			</div>
-			<div class="col-md-3 col-sm-6 ">
-				<h4>{{trans('front.footer_helpful_links')}}</h4>
-				<ul class="footer-links">
-					<li><a href="#">{{trans('front.footer_Help')}}</a></li>
-					<li><a href="#">{{trans('front.footer_Contact')}}</a></li>
-					<li><a href="#">{{trans('front.footer_Conditions')}}</a></li>
-					<li><a href="#">{{trans('front.footer_Disclaimer')}}</a></li>
-					<li><a href="#">{{trans('front.footer_imprint')}}</a></li>
-				</ul>
-				<div class="clearfix"></div>
-			</div>		
-
-		</div>
-		
-		<!-- Copyright -->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="copyrights">© 2020 {{trans('front.footer_campunit_title')}}. {{trans('front.footer_reserved_right')}}.</div>
-			</div>
-		</div>
-
-	</div>
-
-</div>
+@include('footer')
 <!-- Footer / End -->
 
 
