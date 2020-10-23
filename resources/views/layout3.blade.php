@@ -3,8 +3,7 @@
 
 <!-- Basic Page Needs
 ================================================== -->
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-<title>CampUnit</title>
+<title>lenovo</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,7 +14,7 @@
 
 </head>
 
-<body class="transparent-header">
+<body>
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -33,7 +32,7 @@
 
 				<!-- Logo -->
 				<div id="logo">
-					<a href="/"><img src="images/logo-icon.png" data-sticky-logo="images/logo-icon.png" alt=""></a>
+					<a href="index.html"><img src="images/logo-icon.png" alt=""></a>
 				</div>
 
 				<!-- Mobile Navigation -->
@@ -49,31 +48,29 @@
 				<nav id="navigation" class="style-1">
 					<ul id="responsive">
 
-						<li><a class="{{ $activePage == 'home' ? ' current' : '' }}" href="/">{{trans('front.menu_home')}}</a></li>
-						<li><a  href="#">{{trans('front.menu_rent')}}</a>
-							<ul>
-								@foreach($categories as $cat)
-									<li><a href="index-3.html">{{App\Http\Controllers\Controller::getLabelFromObject($cat)}}</a></li>
-								@endforeach
-							</ul>
-						</li>
-						<li><a class="{{ $activePage == 'listyourcamper' ? ' current' : '' }}" href="/listyourcamper">{{trans('front.menu_insert_vehicule')}}</a></li>
+						<li><a class="current" href="#">{{trans('front.menu_home')}}</a></li>
+								<li><a  href="#">{{trans('front.menu_rent')}}</a>
+									<ul>
+										@foreach($categories as $cat)
+											<li><a href="index-3.html">{{App\Http\Controllers\Controller::getLabelFromObject($cat)}}</a></li>
+										@endforeach
+									</ul>
+								</li>
+								<li><a href="#">{{trans('front.menu_insert_vehicule')}}</a></li>
 
-						<li><a href="#">{{trans('front.menu_user_panel')}}</a>
-							<ul>
-								<li><a href="dashboard-my-listings.html">{{trans('front.menu_panel_camper')}}</a></li>
-								<li><a href="dashboard-messages.html">{{trans('front.menu_panel_message')}}</a></li>
-								<li><a href="dashboard-messages.html">{{trans('front.menu_panel_notification')}}</a></li>
-								<li><a href="dashboard-bookings.html">{{trans('front.menu_panel_booking')}}</a></li>
-								<li><a href="dashboard-wallet.html">{{trans('front.menu_panel_wallet')}}</a></li>
-								<li><a href="dashboard-reviews.html">{{trans('front.menu_panel_review')}}</a></li>
-								<li><a href="{{route('clients.user.profile')}}">{{trans('front.menu_panel_profil')}}</a></li>
-								<li><a href="dashboard-my-profile.html">{{trans('front.menu_panel_logout')}}</a></li>
-								<li><a href="dashboard-invoice.html">{{trans('front.menu_panel_invoice')}}</a></li>
-							</ul>
-						</li>
-						
-
+								<li><a href="#">{{trans('front.menu_user_panel')}}</a>
+									<ul>
+										<li><a href="dashboard-my-listings.html">{{trans('front.menu_panel_camper')}}</a></li>
+										<li><a href="dashboard-messages.html">{{trans('front.menu_panel_message')}}</a></li>
+										<li><a href="dashboard-messages.html">{{trans('front.menu_panel_notification')}}</a></li>
+										<li><a href="dashboard-bookings.html">{{trans('front.menu_panel_booking')}}</a></li>
+										<li><a href="dashboard-wallet.html">{{trans('front.menu_panel_wallet')}}</a></li>
+										<li><a href="dashboard-reviews.html">{{trans('front.menu_panel_review')}}</a></li>
+										<li><a href="{{route('clients.user.profile')}}">{{trans('front.menu_panel_profil')}}</a></li>
+										<li><a href="dashboard-my-profile.html">{{trans('front.menu_panel_logout')}}</a></li>
+										<li><a href="dashboard-invoice.html">{{trans('front.menu_panel_invoice')}}</a></li>
+									</ul>
+								</li>
 					</ul>
 				</nav>
 				<div class="clearfix"></div>
@@ -82,8 +79,7 @@
 			</div>
 			<!-- Left Side Content / End -->
 
-
-						<!-- Right Side Content / End -->
+			<!-- Right Side Content / End -->
 			<div class="right-side">
 				<div class="header-widget">
 					<a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim"><i class="sl sl-icon-login"></i> Sign In</a>
@@ -196,10 +192,8 @@
 <!-- Header Container / End -->
 
 
-<!-- Banner
-================================================== -->
-@yield('banner')
 @yield('content')
+
 <!-- Footer
 ================================================== -->
 @include('footer')
@@ -212,6 +206,7 @@
 
 </div>
 <!-- Wrapper / End -->
+
 
 
 <!-- Scripts
@@ -229,34 +224,27 @@
 <script type="text/javascript" src="scripts/tooltips.min.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 
-
-<!-- Leaflet // Docs: https://leafletjs.com/ -->
-<script src="scripts/leaflet.min.js"></script>
-
-<!-- Leaflet Maps Scripts -->
-<script src="scripts/leaflet-markercluster.min.js"></script>
-<script src="scripts/leaflet-gesture-handling.min.js"></script>
-<script src="scripts/leaflet-listeo.js"></script>
-
-<!-- Leaflet Geocoder + Search Autocomplete // Docs: https://github.com/perliedman/leaflet-control-geocoder -->
-<script src="scripts/leaflet-autocomplete.js"></script>
-<script src="scripts/leaflet-control-geocoder.js"></script>
-
-
-<!-- Typed Script -->
-<script type="text/javascript" src="scripts/typed.js"></script>
+<!-- Google Autocomplete -->
 <script>
-var typed = new Typed('.typed-words', {
-strings: [""," "," "],
-	typeSpeed: 80,
-	backSpeed: 80,
-	backDelay: 4000,
-	startDelay: 1000,
-	loop: true,
-	showCursor: true
-});
-</script>
+  function initAutocomplete() {
+    var input = document.getElementById('autocomplete-input');
+    var autocomplete = new google.maps.places.Autocomplete(input);
 
+    autocomplete.addListener('place_changed', function() {
+      var place = autocomplete.getPlace();
+      if (!place.geometry) {
+        return;
+      }
+    });
+
+	if ($('.main-search-input-item')[0]) {
+	    setTimeout(function(){
+	        $(".pac-container").prependTo("#autocomplete-container");
+	    }, 300);
+	}
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script>
 
 <!-- Style Switcher
 ================================================== -->

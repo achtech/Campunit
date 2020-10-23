@@ -11,6 +11,7 @@ class CamperCategory extends Base
         'label_de',
         'label_fr',
         'created_by',
-        'updated_by'
+        'updated_by',
+        'image'
     ];
 }

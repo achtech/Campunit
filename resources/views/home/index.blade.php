@@ -1,7 +1,7 @@
 
 @extends('layout',['activePage' => 'home'])
 @section('banner')
-    @include('slider')
+@include('slider')
 @endsection
 @section('content')
 <!-- Content
@@ -61,7 +61,7 @@
 	<div class="row">
 
 		<div class="col-md-12">
-			<h3 class="headline centered margin-top-75">
+			<h3 class="headline centered">
 				<strong class="headline-with-separator">{{trans('front.title_categories')}}</strong>
 			</h3>
 		</div>
@@ -86,7 +86,7 @@
 </div>
 <!-- Category Boxes / End -->
 <!-- Info Section -->
-<section class="fullwidth padding-top-75 padding-bottom-70 margin-top-section" data-background-color="#fff">
+<section class="fullwidth padding-bottom-70 margin-top-section" data-background-color="#fff">
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
@@ -121,14 +121,16 @@
 			</div>
 		</div>
 	</div>
-
+	<div class="col-md-12 centered-content">
+		<a href="pages-blog.html" class="button border margin-top-10">{{trans('front.find_camper_now')}}</a>
+	</div>
 </div>
 </section>
 <!-- Info Section / End -->
 
 
 <!-- Recent Blog Posts -->
-<section class="fullwidth margin-top-0 padding-top-75 padding-bottom-75" data-background-color="#fff">
+<section class="fullwidth margin-top-0  padding-bottom-75" data-background-color="#fff">
 	<div class="container">
 
 		<div class="row">
@@ -195,7 +197,7 @@
 			<!-- Blog post Item / End -->
 
 			<div class="col-md-12 centered-content">
-				<a href="pages-blog.html" class="button border margin-top-10">View Blog</a>
+				<a href="pages-blog.html" class="button border margin-top-10">{{trans('front.find_blog')}}</a>
 			</div>
 
 		</div>

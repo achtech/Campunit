@@ -31,7 +31,18 @@ return [
     'menu_rent_other' => 'Rent a other',
     'menu_register' => 'Register',
     'menu_rent' => 'Rent',
-
+    'menu_user_panel' => 'User Panel',
+    'menu_panel_camper' =>'My Campers',
+    'menu_panel_message' =>'Messages',
+    'menu_panel_notification' =>'Notifications',
+    'menu_panel_booking' => 'Bookings',
+    'menu_panel_wallet' =>'Wallet',
+    'menu_panel_review' =>'Reviews',
+    'menu_panel_profil' =>'My profil',
+    'menu_panel_logout' =>'Logout',
+    'menu_panel_invoice' =>'Invoice',
+    'menu_panel_dashboard_navigator'=>'Dashboard Navigation',
+    'menu_panel_account'=>'My Account',
     /*
     -----------------------Slider ----------
      */
@@ -60,26 +71,16 @@ return [
     'footer_reserved_right' => 'All Rights Reserved',
 
     /*
-    ----------------------Content ------------------
+    ---------------------- Home ------------------
      */
     'content_most_visited' => 'Most Visited Campers',
-    'title_categories' => 'the right one for camping',
-    'content_user_review' => 'This is how it goes on vacation',
-    'content_text_find_place' => 'Just look for the place where you would like to pick up your camper. You will be shown the nearest campers in this area and you can easily choose one of your choice.',
-    'choose_data_request' => 'If you have selected a camper, you will see all further details on the overview. Does the camper suit you? Then choose your preferred date and send the request to the landlord.',
-    'receive_request' => 'Now you just need a little patience. As soon as the landlord has received your request, he can confirm it and nothing stands in the way of your camping holiday. Have fun with your adventure.',
-    'our_bloc' => 'From The Blog',
-    'Renting out your camper & equipments online' => 'Renting out your camper & equipments online',
-    'Create profile' => 'Create profile',
-    'Define availabilty' => 'Define availabilty',
-    'Reply to booking requests' => 'Reply to booking requests',
-    'Rent out Now' => 'Rent out Now',
-    'advantages' => 'Advantages',
-    'Verify' => 'Verify',
-    'Register for free' => 'Register for free',
-    'Insurance' => 'Insurance',
-    'You decide who can hire your camper at what price' => 'You decide who can hire your camper at what price',
-    'Register your camper for free. We only receive a service fee after a successfil booking' => 'Register your camper for free. We only receive a service fee after a successfil booking',
-    'insurance_desc' => "Together with Baloise we're offering an insurance solution so you can rent out without worries",
-    'What our vehicle owners say' => 'What our vehicle owners say',
+    'title_categories' =>'the right one for camping',
+    'content_user_review' =>'This is how it goes on vacation',
+    'content_text_find_place' =>'Just look for the place where you would like to pick up your camper. You will be shown the nearest campers in this area and you can easily choose one of your choice.',
+    'choose_data_request'=>'If you have selected a camper, you will see all further details on the overview. Does the camper suit you? Then choose your preferred date and send the request to the landlord.',
+    'receive_request'=>'Now you just need a little patience. As soon as the landlord has received your request, he can confirm it and nothing stands in the way of your camping holiday. Have fun with your adventure.',
+    'our_bloc'=>'From The Blog',
+    'find_camper_now'=>'Find a camper now',
+    'find_blog'=>'viw Blog',
+
 ];
