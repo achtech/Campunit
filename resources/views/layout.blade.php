@@ -12,7 +12,8 @@
 ================================================== -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/main-color.css" id="colors">
-
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
 <body class="transparent-header">
@@ -73,6 +74,11 @@
 							</ul>
 						</li>
 						
+						<li>
+							<a  id="myBtn">{{trans('front.menu_login')}}</a>
+									@include('connexion.login');
+						</li>
+						<li><a>{{trans('front.menu_register')}}</a></li>
 
 					</ul>
 				</nav>
@@ -90,13 +96,10 @@
 					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang current">EN</a>
 					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang">DE</a>
 					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang">FR</a>
-
 				</div>
 			</div>
 			<!-- Right Side Content / End -->
 
-			<!-- Sign In Popup -->
-			<div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
 
 				<div class="small-dialog-header">
 					<h3>Sign In</h3>
@@ -242,8 +245,98 @@
 <script src="scripts/leaflet-autocomplete.js"></script>
 <script src="scripts/leaflet-control-geocoder.js"></script>
 
-
-<!-- Typed Script -->
+<script>
+	var modal = document.getElementById("myModal");
+	var btn = document.getElementById("myBtn");
+	var span = document.getElementsByClassName("close")[0];
+	btn.onclick = function() {
+	  modal.style.display = "block";
+	}
+	span.onclick = function() {
+	  modal.style.display = "none";
+	}
+	
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+		modal.style.display = "none";
+	  }
+	}
+	</script>
+	<script>
+		var registerModel = document.getElementById("registerModel");
+		var registerBtn = document.getElementById("register");
+		var registerAfterForgotPassword = document.getElementById("registerAfterForgotPassword");
+		registerAfterForgotPassword.onclick = function() {
+		  registerModel.style.display = "block";
+		}
+		var spanClose = document.getElementsByClassName("close-second-model")[0];
+		registerBtn.onclick = function() {
+		  registerModel.style.display = "block";
+		}
+		spanClose.onclick = function() {
+		  registerModel.style.display = "none";
+		}
+		window.onclick = function(event) {
+		  if (event.target == registerModel) {
+			registerModel.style.display = "none";
+		  }
+		}
+	</script>
+	<script>
+		var emailModel = document.getElementById("registerWithEmail");
+		var emailBtn = document.getElementById("registrationEmail");
+		var span = document.getElementsByClassName("close-third-model")[0];
+		var back=document.getElementsByClassName("go-back")[0];
+		emailBtn.onclick = function() {
+		  emailModel.style.display = "block";
+		}
+		span.onclick = function() {
+		  emailModel.style.display = "none";
+		}
+		back.onclick = function() {
+		  emailModel.style.display = "none";
+		}
+		window.onclick = function(event) {
+		  if (event.target == emailModel) {
+			emailModel.style.display = "none";
+		  }
+		}
+	</script>
+	<script>
+		var paswwordModel = document.getElementById("passwordModel");
+		var passwordBtn = document.getElementById("forget-password");
+		var span = document.getElementsByClassName("close-forget-password-model")[0];
+		var closePopup = document.getElementById("log_in");
+		passwordBtn.onclick = function() {
+		  paswwordModel.style.display = "block";
+		}
+		closePopup.onclick= function() {
+		  paswwordModel.style.display = "none";
+		}
+		span.onclick = function() {
+		  paswwordModel.style.display = "none";
+		}
+		window.onclick = function(event) {
+		  if (event.target == paswwordModel) {
+			paswwordModel.style.display = "none";
+		  }
+		}
+</script>
+<script>
+	$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
+function showDiv() {
+	if(document.getElementById('client_name').value == "ouma"){
+		document.getElementById('signUpRequirments').style.display = "block";
+	}
+   
+}
+</script>
+	<!-- Typed Script -->
 <script type="text/javascript" src="scripts/typed.js"></script>
 <script>
 var typed = new Typed('.typed-words', {
@@ -288,7 +381,6 @@ strings: [""," "," "],
 
 </div>
 <!-- Style Switcher / End -->
-
 
 </body>
 </html>
