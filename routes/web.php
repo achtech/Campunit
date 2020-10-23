@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CamperController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('lang/{lang}', function ($lang) {
@@ -21,3 +22,13 @@ Route::group(['middleware' => 'Lang'], function () {
     Route::get('/imprint', [ContactController::class, 'imprint'])->name('imprint');
     Route::get('/help', [ContactController::class, 'help'])->name('help');
 });
+Route::post('login', 'App\Http\Controllers\ClientController@doLogin');
+Route::get('auth/facebook', [ClientController::class, 'redirectToFacebook']);
+Route::get('auth/facebook/callback', 'App\Http\Controllers\ClientController@handleFacebookCallback');
+Route::post('/signUp', [ClientController::class, 'sign_up']);
+//Route::get('/signUp', [ClientController::class, 'sign_up'])->name('client.index');
+Route::resource('client', 'App\Http\Controllers\ClientController', ['except' => 'destroy', 'names' => [
+    'index' => 'client.index',
+    'store' => 'client.store',
+    'show' => 'client.show',
+]]);
