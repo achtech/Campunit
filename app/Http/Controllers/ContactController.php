@@ -31,6 +31,14 @@ class ContactController extends Controller
         return view('helpLinks.disclaimer')->with('categories', $categories);
     }
 
+    public function imprint()
+    {
+
+        $categories = DB::table('camper_categories')->paginate(10);
+
+        return view('helpLinks.imprint')->with('categories', $categories);
+    }
+
     public function help()
     {
 
