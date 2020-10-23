@@ -56,7 +56,7 @@
 										@endforeach
 									</ul>
 								</li>
-								<li><a href="#">{{trans('front.menu_insert_vehicule')}}</a></li>
+								<li><a href="/camper">{{trans('front.menu_insert_vehicule')}}</a></li>
 
 								<li><a href="#">{{trans('front.menu_user_panel')}}</a>
 									<ul>
