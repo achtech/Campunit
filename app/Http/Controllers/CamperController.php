@@ -15,4 +15,11 @@ class CamperController extends Controller
         return view('camper.index')->with('categories', $categories);
     }
 
+    public function rent_out()
+    {
+        $categories = DB::table('camper_categories')->paginate(10);
+
+        return view('camper.rent_out')->with('categories', $categories);
+    }
+
 }

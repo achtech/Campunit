@@ -15,8 +15,8 @@
 			<P>
 				{{trans('front.text_content_1_2')}}
 			</p>
-			<button class="button" onclick="">{{trans('front.Rent out Camper')}}</button>
-			<button class="button" onclick="">{{trans('front.learn_more')}}</button>
+			<a class="button" href="/rent_out">{{trans('front.Rent out Camper')}}</a>
+			<a class="button" >{{trans('front.learn_more')}}</a>
 		</div>
 		<div class="col-md-6">
 			<div>

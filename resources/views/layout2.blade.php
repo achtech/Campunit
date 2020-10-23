@@ -26,12 +26,12 @@
 	<!-- Header -->
 	<div id="header" class="not-sticky">
 		<div class="container">
-			
+
 			<!-- Left Side Content -->
 			<div class="left-side">
-				
+
 				<!-- Logo -->
-				<div id="logo">
+				<div id="logo" style="padding-left: 75px;">
 					<a href="index.html"><img src="images/logo-icon.png" alt=""></a>
 					<a href="index.html" class="dashboard-logo"><img src="images/logo-icon.png" alt=""></a>
 				</div>
@@ -49,7 +49,7 @@
 				<nav id="navigation" class="style-1">
 					<ul id="responsive">
 
-					<li><a class="current" href="{{route('home.index')}}">{{trans('front.menu_home')}}</a></li>
+					<li><a class="{{ $activePage == 'home' ? ' current' : '' }}" href="/">{{trans('front.menu_home')}}</a></li>
 					<li><a  href="#">{{trans('front.menu_rent')}}</a>
 							<ul>
 								@foreach($categories as $cat)
@@ -57,8 +57,8 @@
 								@endforeach
 							</ul>
 						</li>
-						<li><a href="#">{{trans('front.menu_insert_vehicule')}}</a></li>
-						
+						<li><a class="{{ $activePage == 'camper' ? ' current' : '' }}" href="/camper">{{trans('front.menu_insert_vehicule')}}</a></li>
+
 						<li><a href="#">{{trans('front.menu_user_panel')}}</a>
 							<ul>
 								<li><a href="dashboard-my-listings.html">{{trans('front.menu_panel_camper')}}</a></li>
@@ -76,7 +76,7 @@
 				</nav>
 				<div class="clearfix"></div>
 				<!-- Main Navigation / End -->
-				
+
 			</div>
 			<!-- Left Side Content / End -->
 
@@ -84,7 +84,7 @@
 			<div class="right-side">
 				<!-- Header Widget -->
 				<div class="header-widget">
-					
+
 					<!-- User Menu -->
 					<div class="user-menu">
 						<div class="user-name"><span><img src="images/dashboard-avatar.jpg" alt=""></span>Hi, Tom!</div>
@@ -120,7 +120,7 @@
 
 	<!-- Responsive Navigation Trigger -->
 	<a href="#" class="dashboard-responsive-nav-trigger"><i class="fa fa-reorder"></i> Dashboard Navigation</a>
-	
+
 	<div class="dashboard-nav">
 		<div class="dashboard-nav-inner">
 
@@ -130,19 +130,19 @@
 				<li><a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i> Bookings</a></li>
 				<li><a href="dashboard-wallet.html"><i class="sl sl-icon-wallet"></i> Wallet</a></li>
 			</ul>
-			
+
 			<ul data-submenu-title="Listings">
 				<li><a><i class="sl sl-icon-layers"></i> My Listings</a>
 					<ul>
 						<li><a href="dashboard-my-listings.html">Active <span class="nav-tag green">6</span></a></li>
 						<li><a href="dashboard-my-listings.html">Pending <span class="nav-tag yellow">1</span></a></li>
 						<li><a href="dashboard-my-listings.html">Expired <span class="nav-tag red">2</span></a></li>
-					</ul>	
+					</ul>
 				</li>
 				<li><a href="dashboard-reviews.html"><i class="sl sl-icon-star"></i> Reviews</a></li>
 				<li><a href="dashboard-bookmarks.html"><i class="sl sl-icon-heart"></i> Bookmarks</a></li>
 				<li><a href="dashboard-add-listing.html"><i class="sl sl-icon-plus"></i> Add Listing</a></li>
-			</ul>	
+			</ul>
 
 			<ul data-submenu-title="Account">
 				<li class="active"><a href="dashboard-my-profile.html"><i class="sl sl-icon-user"></i> My Profile</a></li>
@@ -152,8 +152,10 @@
 	</div>
 	</div>
 	<!-- Navigation / End -->
-
-	@yield('content')
+	<!-- Main Navigation -->
+	<div class="dashboard-content">
+		@yield('content')
+	</div>
 
 
 </div>
