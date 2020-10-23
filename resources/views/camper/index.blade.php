@@ -1,8 +1,6 @@
 
-@extends('layout',['activePage' => 'camper'])
-@section('banner')
-    @include('camper/sliderList')
-@endsection
+@extends('layout3',['activePage' => 'camper'])
+
 @section('content')
 <!-- Content
 ================================================== -->

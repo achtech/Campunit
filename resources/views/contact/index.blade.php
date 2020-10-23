@@ -1,8 +1,6 @@
 
-@extends('layout',['activePage' => 'contact'])
-@section('banner')
-    @include('slider')
-@endsection
+@extends('layout3',['activePage' => 'contact'])
+
 @section('content')
 <!-- Content
 ================================================== -->

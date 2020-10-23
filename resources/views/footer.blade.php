@@ -32,16 +32,16 @@
 				<h4>{{trans('front.footer_helpful_links')}}</h4>
 				<ul class="footer-links">
 					<li><a href="#">{{trans('front.footer_Help')}}</a></li>
-					<li><a href="#">{{trans('front.footer_Contact')}}</a></li>
-					<li><a href="#">{{trans('front.footer_Conditions')}}</a></li>
-					<li><a href="#">{{trans('front.footer_Disclaimer')}}</a></li>
-					<li><a href="#">{{trans('front.footer_imprint')}}</a></li>
+					<li><a href="/contact">{{trans('front.footer_Contact')}}</a></li>
+					<li><a href="/terms">{{trans('front.footer_Conditions')}}</a></li>
+					<li><a href="/disclaimer">{{trans('front.footer_Disclaimer')}}</a></li>
+					<li><a href="imprint">{{trans('front.footer_imprint')}}</a></li>
 				</ul>
 				<div class="clearfix"></div>
-			</div>		
+			</div>
 
 		</div>
-		
+
 		<!-- Copyright -->
 		<div class="row">
 			<div class="col-md-12">

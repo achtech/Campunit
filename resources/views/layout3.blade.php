@@ -244,6 +244,15 @@
 	}
 }
 </script>
+
+<!-- Leaflet // Docs: https://leafletjs.com/ -->
+<script src="scripts/leaflet.min.js"></script>
+
+<!-- Leaflet Maps Scripts -->
+<script src="scripts/leaflet-markercluster.min.js"></script>
+<script src="scripts/leaflet-gesture-handling.min.js"></script>
+<script src="scripts/leaflet-listeo.js"></script>
+
 <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script>
 
 <!-- Style Switcher

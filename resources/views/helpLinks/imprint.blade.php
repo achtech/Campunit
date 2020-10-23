@@ -1,7 +1,5 @@
-@extends('layout',['activePage' => 'imprint'])
-@section('banner')
-    @include('slider')
-@endsection
+@extends('layout3',['activePage' => 'imprint'])
+
 @section('content')
 <!-- Content
 ================================================== -->
