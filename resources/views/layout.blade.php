@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/main-color.css" id="colors">
 <link rel="stylesheet" href="css/font-awesome.min.css">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
 <body class="transparent-header">
@@ -64,166 +65,9 @@
 						
 						<li>
 							<a  id="myBtn">{{trans('front.menu_login')}}</a>
-							<div id="myModal" class="modal">
-
-								<!-- Modal content -->
-								<div class="modal-content" style="background: #f4f4f4;">
-									<span class="close">&times;</span>
-									<header class="modal-header">
-										<div class="controls"><!---->
-											 <a  href="#" class="control-right">
-												</a>
-											</div> 
-											<div  class="titles-container">
-												<h3 class="text-center">{{trans('front.to_connect')}}</h3></div>
-									</header>
-									<div class="modal-body">
-											<div class="container">
-												<form>
-												
-													<div  class="form-group">
-														<label class="sr-only">
-															{{trans('front.email_address')}}
-													  	</label>
-														<input  type="text" placeholder="Adresse e-mail" autocomplete="username" class="login-username form-control" style="width:727px !important;">
-													</div>
-													<div  class="form-group">
-														<label class="sr-only">
-															{{trans('front.password')}}
-													  	</label>
-														<input  type="password" placeholder="Adresse e-mail" autocomplete="username" class="login-username form-control" style="width:727px !important;">
-													</div>
-													<div >
-														<button type="button" class="btn btn-primary btn-block w-727 connexion">
-															{{trans('front.to_connect')}}
-														</button>
-													</div>
-													<a style="color: #f15424;" id="forget-password"><small >{{trans('front.forget_password')}}</small></a>
-													<div id="passwordModel" class="modal">
-														<div class="modal-content" style="background: #f4f4f4;margin-top: 82px;">
-															<span class="close-forget-password-model">&times;</span>
-														
-														<div class="titles-container"><h3 class="text-center">{{trans('front.to_connect')}}</h3></div>
-														
-															<form>
-																<div class="form-group"><label  class="sr-only">
-																	Email address
-																  </label> <input type="text" placeholder="Email address" autocomplete="username" class=" form-control w-727" >
-																</div>
-																<button type="button" class="btn btn-primary connexion w-727"><!---->
-																	{{trans('front.reset_password_link')}}
-																</button>
-															</form>
-															<a style="color: #f15424;" id="forget-password"><small >{{trans('front.register')}}</small></a>
-	
-														</div>
-													</div>
-														
-													<div class="hr-bar w-727">
-														<span  class="hr-bar-content" style="color: rgb(204, 204, 204);">
-															<small >{{trans('front.or')}}</small>
-														</span>
-													</div>
-													<button class="btn btn-primary w-727 facebook" >
-														{{trans('front.facebook_connexion')}}
-													</button>
-												</form>
-											</div>
-									</div>
-									<br/>
-									<div class="create-compte">
-										{{trans('front.create_account')}}<a class="inscription" href="#" id="register" >{{trans('front.register')}}</a>
-										<div id="registerModel" class="modal">
-											<div class="modal-content" style="background: #f4f4f4;margin-top: 82px;">
-												<span class="close-second-model">&times;</span>
-												<div class="titles-container">
-													<h4 class="text-center">{{trans('front.create_an_account')}}</h4> 
-													<h3 class="text-center">{{trans('front.welcome')}}</h3>
-													<br/>
-													<div class="modal-body"> 
-														<div>
-														<button id="registrationEmail" class="btn btn-primary w-727 gmail">
-															<i class="far fa-envelope-square"></i>{{trans('front.register_email_address')}}
-														</button>
-														<div id="registerWithEmail" class="modal">
-															<div class="modal-content" style="background: #f4f4f4;margin-top: 82px;">
-																<div class="controls">
-																	<a class="control-left"><i class="fa fa-angle-left icons-design go-back"></i></a>
-																	<span class="close-third-model">&times;</span>
-																</div>
-																<div class="titles-container">
-																	<h1 class="text-center">{{trans('front.create_an_account')}}</h1> 
-																	<h4 class="text-center">{{trans('front.register_with_email_address')}}</h4>
-																	<form>
-																		<div class="form-group">
-																				<label  class="sr-only">
-																				{{trans('front.first_name')}}
-																			</label> 
-																			<input   type="text" placeholder="First Name" class="form-control">
-																		</div>
-																		<div class="form-group">
-																			<label  class="sr-only">
-																			{{trans('front.last_name')}}
-																			</label> 
-																			<input   type="text" placeholder="Last Name" class="form-control">
-																		</div>
-																	<div class="form-group">
-																		<label  class="sr-only">
-																		{{trans('front.email_add')}}
-																		</label> 
-																		<input type="text" placeholder="Email Address" class="form-control">
-																	</div>
-																	<label  >
-																		<i class="fas fa-info-circle"></i>{{trans('front.minimum_length')}}
-																	</label>
-																	<div class="form-group">
-																		<label  class="sr-only">
-																		{{trans('front.password')}}
-																		</label> 
-																		<input type="password" placeholder="Password" class="form-control">
-																	</div>
-																	<div class="form-group">
-																		<label style="display: flex;"><input style="width: auto;" type="checkbox" class="form-control">
-																		<span style="margin-top: 12px;">{{trans('front.agree')}} <a style="display: contents;" class="inscription" href="#" id="register" >{{trans('front.service_terms')}}</a>{{trans('front.and')}} <a style="display: contents;" class="inscription" href="#" id="register" >{{trans('front.privacy_policy')}}</a></span>
-																		</label>
-																	</div>
-																	<button  type="submit" class="btn w-727 connexion">
-																		{{trans('front.sign_up')}}
-																	  </button>
-																	</form>
-																<div class="create-compte" style="bottom: -19px;position: relative;">
-																	{{trans('front.existed_account')}}<a class="inscription" href="#" id="register" >{{trans('front.to_connect')}}</a>
-																</div>
-																</div>
-																
-														  
-														</div>
-							
-													</div>	</div>
-														<div class="hr-bar">
-															<span  class="hr-bar-content" >
-																<small>or</small>
-															</span>
-														</div> 
-														<button class="btn btn-primary facebook w-727">
-															{{trans('front.register_facebook')}}
-														</button> 
-														<br/><br/><br/>
-												</div>
-												<div class="create-compte" style="bottom: -19px;position: relative;">
-													{{trans('front.existed_account')}}<a class="inscription" href="#" id="register" >{{trans('front.to_connect')}}</a>
-												</div>
-												</div>
-												
-										  
-										</div>
-			
-									</div>	
-								</div>
-							  
-							</div>
+									@include('connexion.login');
 						</li>
-						<li><a href="#" >{{trans('front.menu_register')}}</a></li>
+						<li><a>{{trans('front.menu_register')}}</a></li>
 
 					</ul>
 				</nav>
@@ -247,104 +91,10 @@
 							<li><a href="index.html"><i class="sl sl-icon-power"></i> Logout</a></li>
 						</ul>
 					</div>
-
-
-					<a href="dashboard-add-listing.html" class="button border with-icon">Add Listing <i class="sl sl-icon-plus"></i></a>
 				</div>
 			</div>
 			<!-- Right Side Content / End -->
 
-			<!-- Sign In Popup -->
-			<div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
-
-				<div class="small-dialog-header">
-					<h3>Sign In</h3>
-				</div>
-
-				<!--Tabs -->
-				<div class="sign-in-form style-1">
-
-					<ul class="tabs-nav">
-						<li class=""><a href="#tab1">Log In</a></li>
-						<li><a href="#tab2">Register</a></li>
-					</ul>
-
-					<div class="tabs-container alt">
-
-						<!-- Login -->
-						<div class="tab-content" id="tab1" style="display: none;">
-							<form method="post" class="login">
-
-								<p class="form-row form-row-wide">
-									<label for="username">Username:
-										<i class="im im-icon-Male"></i>
-										<input type="text" class="input-text" name="username" id="username" value="" />
-									</label>
-								</p>
-
-								<p class="form-row form-row-wide">
-									<label for="password">Password:
-										<i class="im im-icon-Lock-2"></i>
-										<input class="input-text" type="password" name="password" id="password"/>
-									</label>
-									<span class="lost_password">
-										<a href="#" >Lost Your Password?</a>
-									</span>
-								</p>
-
-								<div class="form-row">
-									<input type="submit" class="button border margin-top-5" name="login" value="Login" />
-									<div class="checkboxes margin-top-10">
-										<input id="remember-me" type="checkbox" name="check">
-										<label for="remember-me">Remember Me</label>
-									</div>
-								</div>
-								
-							</form>
-						</div>
-
-						<!-- Register -->
-						<div class="tab-content" id="tab2" style="display: none;">
-
-							<form method="post" class="register">
-								
-							<p class="form-row form-row-wide">
-								<label for="username2">Username:
-									<i class="im im-icon-Male"></i>
-									<input type="text" class="input-text" name="username" id="username2" value="" />
-								</label>
-							</p>
-								
-							<p class="form-row form-row-wide">
-								<label for="email2">Email Address:
-									<i class="im im-icon-Mail"></i>
-									<input type="text" class="input-text" name="email" id="email2" value="" />
-								</label>
-							</p>
-
-							<p class="form-row form-row-wide">
-								<label for="password1">Password:
-									<i class="im im-icon-Lock-2"></i>
-									<input class="input-text" type="password" name="password1" id="password1"/>
-								</label>
-							</p>
-
-							<p class="form-row form-row-wide">
-								<label for="password2">Repeat Password:
-									<i class="im im-icon-Lock-2"></i>
-									<input class="input-text" type="password" name="password2" id="password2"/>
-								</label>
-							</p>
-
-							<input type="submit" class="button border fw margin-top-10" name="register" value="Register" />
-	
-							</form>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			<!-- Sign In Popup / End -->
 
 		</div>
 	</div>
@@ -473,11 +223,15 @@
 	<script>
 		var registerModel = document.getElementById("registerModel");
 		var registerBtn = document.getElementById("register");
-		var span = document.getElementsByClassName("close-second-model")[0];
+		var registerAfterForgotPassword = document.getElementById("registerAfterForgotPassword");
+		registerAfterForgotPassword.onclick = function() {
+		  registerModel.style.display = "block";
+		}
+		var spanClose = document.getElementsByClassName("close-second-model")[0];
 		registerBtn.onclick = function() {
 		  registerModel.style.display = "block";
 		}
-		span.onclick = function() {
+		spanClose.onclick = function() {
 		  registerModel.style.display = "none";
 		}
 		window.onclick = function(event) {
@@ -509,9 +263,13 @@
 	<script>
 		var paswwordModel = document.getElementById("passwordModel");
 		var passwordBtn = document.getElementById("forget-password");
-		var span = document.getElementsByClassName("close-third-model")[0];
+		var span = document.getElementsByClassName("close-forget-password-model")[0];
+		var closePopup = document.getElementById("log_in");
 		passwordBtn.onclick = function() {
 		  paswwordModel.style.display = "block";
+		}
+		closePopup.onclick= function() {
+		  paswwordModel.style.display = "none";
 		}
 		span.onclick = function() {
 		  paswwordModel.style.display = "none";
@@ -521,6 +279,19 @@
 			paswwordModel.style.display = "none";
 		  }
 		}
+</script>
+<script>
+	$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
+function showDiv() {
+	if(document.getElementById('client_name').value == "ouma"){
+		document.getElementById('signUpRequirments').style.display = "block";
+	}
+   
+}
 </script>
 	<!-- Typed Script -->
 <script type="text/javascript" src="scripts/typed.js"></script>

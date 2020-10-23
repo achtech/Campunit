@@ -21063,7 +21063,7 @@ body {
     color: white;
     font-weight: 700;
 }
-.facebook {
+.with-facebook {
     background-color: #36518a;
     color: white;
     font-weight: 700;
@@ -21108,4 +21108,8 @@ a::after {
     float: right;
     font-size: 28px;
     font-weight: bold;
+}
+.fb-design {
+    color: white;
+    font-size: 91% !important;
 }

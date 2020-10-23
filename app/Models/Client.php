@@ -18,6 +18,7 @@ class Client extends Base
         'status',
         'id_avatars',
         'created_by',
-        'updated_by'
+        'updated_by',
+        'facebook_id'
     ];
 }
