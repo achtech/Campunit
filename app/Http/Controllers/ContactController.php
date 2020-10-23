@@ -15,4 +15,28 @@ class ContactController extends Controller
         return view('contact.index')->with('categories', $categories);
     }
 
+    public function terms()
+    {
+
+        $categories = DB::table('camper_categories')->paginate(10);
+
+        return view('helpLinks.terms')->with('categories', $categories);
+    }
+
+    public function disclaimer()
+    {
+
+        $categories = DB::table('camper_categories')->paginate(10);
+
+        return view('helpLinks.disclaimer')->with('categories', $categories);
+    }
+
+    public function imprint()
+    {
+
+        $categories = DB::table('camper_categories')->paginate(10);
+
+        return view('helpLinks.imprint')->with('categories', $categories);
+    }
+
 }

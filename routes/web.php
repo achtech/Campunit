@@ -13,4 +13,7 @@ Route::group(['middleware' => 'Lang'], function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/listyourcamper', [ListYourCamperController::class, 'index'])->name('listyourcamper');
     Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+    Route::get('/terms', [ContactController::class, 'terms'])->name('terms');
+    Route::get('/disclaimer', [ContactController::class, 'disclaimer'])->name('disclaimer');
+    Route::get('/imprint', [ContactController::class, 'imprint'])->name('imprint');
 });
