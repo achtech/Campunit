@@ -17,4 +17,5 @@ Route::group(['middleware' => 'Lang'], function () {
     Route::get('/terms', [ContactController::class, 'terms'])->name('terms');
     Route::get('/disclaimer', [ContactController::class, 'disclaimer'])->name('disclaimer');
     Route::get('/imprint', [ContactController::class, 'imprint'])->name('imprint');
+    Route::get('/help', [ContactController::class, 'help'])->name('help');
 });

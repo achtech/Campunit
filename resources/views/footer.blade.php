@@ -31,7 +31,7 @@
 			<div class="col-md-3 col-sm-6 ">
 				<h4>{{trans('front.footer_helpful_links')}}</h4>
 				<ul class="footer-links">
-					<li><a href="#">{{trans('front.footer_Help')}}</a></li>
+					<li><a href="/help">{{trans('front.footer_Help')}}</a></li>
 					<li><a href="/contact">{{trans('front.footer_Contact')}}</a></li>
 					<li><a href="/terms">{{trans('front.footer_Conditions')}}</a></li>
 					<li><a href="/disclaimer">{{trans('front.footer_Disclaimer')}}</a></li>
