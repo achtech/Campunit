@@ -86,7 +86,7 @@
 						<!-- Right Side Content / End -->
 			<div class="right-side">
 				<div class="header-widget">
-					<a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim"><i class="sl sl-icon-login"></i> Sign In</a>
+					<a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim"><i class="sl sl-icon-login"></i> {{trans('front.menu_sign_in')}}</a>
 					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang current">EN</a>
 					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang">DE</a>
 					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang">FR</a>
@@ -106,8 +106,8 @@
 				<div class="sign-in-form style-1">
 
 					<ul class="tabs-nav">
-						<li class=""><a href="#tab1">Log In</a></li>
-						<li><a href="#tab2">Register</a></li>
+						<li class=""><a href="#tab1">{{trans('front.menu_log_in')}}</a></li>
+						<li><a href="#tab2">{{trans('front.menu_register')}}</a></li>
 					</ul>
 
 					<div class="tabs-container alt">
@@ -117,19 +117,19 @@
 							<form method="post" class="login">
 
 								<p class="form-row form-row-wide">
-									<label for="username">Username:
+									<label for="username">{{trans('front.menu_user_name')}}:
 										<i class="im im-icon-Male"></i>
 										<input type="text" class="input-text" name="username" id="username" value="" />
 									</label>
 								</p>
 
 								<p class="form-row form-row-wide">
-									<label for="password">Password:
+									<label for="password">{{trans('front.menu_user_password')}}:
 										<i class="im im-icon-Lock-2"></i>
 										<input class="input-text" type="password" name="password" id="password"/>
 									</label>
 									<span class="lost_password">
-										<a href="#" >Lost Your Password?</a>
+										<a href="#" >{{trans('front.menu_lost_password')}}?</a>
 									</span>
 								</p>
 
@@ -137,7 +137,7 @@
 									<input type="submit" class="button border margin-top-5" name="login" value="Login" />
 									<div class="checkboxes margin-top-10">
 										<input id="remember-me" type="checkbox" name="check">
-										<label for="remember-me">Remember Me</label>
+										<label for="remember-me">{{trans('front.menu_remember_me')}}</label>
 									</div>
 								</div>
 
@@ -256,7 +256,86 @@ strings: [""," "," "],
 	showCursor: true
 });
 </script>
+<!-- Date Range Picker - docs: http://www.daterangepicker.com/ -->
+<script src="scripts/moment.min.js"></script>
+<script src="scripts/daterangepicker.js"></script>
+<script>
+// Calendar Init
+$(function() {
+	$('#date-picker').daterangepicker({
+		"opens": "left",
+		singleDatePicker: true,
 
+		// Disabling Date Ranges
+		isInvalidDate: function(date) {
+		// Disabling Date Range
+		var disabled_start = moment('09/02/2018', 'MM/DD/YYYY');
+		var disabled_end = moment('09/06/2018', 'MM/DD/YYYY');
+		return date.isAfter(disabled_start) && date.isBefore(disabled_end);
+
+		// Disabling Single Day
+		// if (date.format('MM/DD/YYYY') == '08/08/2018') {
+		//     return true; 
+		// }
+		}
+	});
+	$('#date-picker2').daterangepicker({
+		"opens": "left",
+		singleDatePicker: true,
+
+		// Disabling Date Ranges
+		isInvalidDate: function(date) {
+		// Disabling Date Range
+		var disabled_start = moment('09/02/2018', 'MM/DD/YYYY');
+		var disabled_end = moment('09/06/2018', 'MM/DD/YYYY');
+		return date.isAfter(disabled_start) && date.isBefore(disabled_end);
+
+		// Disabling Single Day
+		// if (date.format('MM/DD/YYYY') == '08/08/2018') {
+		//     return true; 
+		// }
+		}
+	});
+});
+
+// Calendar animation
+$('#date-picker').on('showCalendar.daterangepicker', function(ev, picker) {
+	$('.daterangepicker').addClass('calendar-animated');
+});
+$('#date-picker').on('show.daterangepicker', function(ev, picker) {
+	$('.daterangepicker').addClass('calendar-visible');
+	$('.daterangepicker').removeClass('calendar-hidden');
+});
+$('#date-picker').on('hide.daterangepicker', function(ev, picker) {
+	$('.daterangepicker').removeClass('calendar-visible');
+	$('.daterangepicker').addClass('calendar-hidden');
+});
+$('#date-picker2').on('showCalendar.daterangepicker', function(ev, picker) {
+	$('.daterangepicker').addClass('calendar-animated');
+});
+$('#date-picker2').on('show.daterangepicker', function(ev, picker) {
+	$('.daterangepicker').addClass('calendar-visible');
+	$('.daterangepicker').removeClass('calendar-hidden');
+});
+$('#date-picker2').on('hide.daterangepicker', function(ev, picker) {
+	$('.daterangepicker').removeClass('calendar-visible');
+	$('.daterangepicker').addClass('calendar-hidden');
+});
+</script>
+
+
+<!-- Replacing dropdown placeholder with selected time slot -->
+<script>
+$(".time-slot").each(function() {
+	var timeSlot = $(this);
+	$(this).find('input').on('change',function() {
+		var timeSlotVal = timeSlot.find('strong').text();
+
+		$('.panel-dropdown.time-slots-dropdown a').html(timeSlotVal);
+		$('.panel-dropdown').removeClass('active');
+	});
+});
+</script>
 
 <!-- Style Switcher
 ================================================== -->

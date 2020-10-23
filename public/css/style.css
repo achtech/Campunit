@@ -2032,6 +2032,9 @@ body .typed-cursor.typed-cursor--blink.typed-fade-out{
 	padding-right: 30px;
 }
 
+.main-search-input-item.remove_border{
+	border-right: 0px;
+}
 .main-search-input  .main-search-input-item:nth-last-child(2) {
 	border-right: none;
 	padding-left: 15px;

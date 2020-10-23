@@ -43,6 +43,13 @@ return [
     'menu_panel_invoice' =>'Invoice',
     'menu_panel_dashboard_navigator'=>'Dashboard Navigation',
     'menu_panel_account'=>'My Account',
+    'menu_sign_in'=>'Sign In',
+    'menu_log_in' =>'Log In',
+    'menu_register'=>'Register',
+    'menu_user_name'=>'UserName',
+    'menu_user_password'=>'Password',
+    'menu_lost_password'=>'Lost Your Password?',
+    'menu_remember_me'=>'Remember me',
     /*
     -----------------------Slider ----------
     */
@@ -80,5 +87,6 @@ return [
     'our_bloc'=>'From The Blog',
     'find_camper_now'=>'Find a camper now',
     'find_blog'=>'viw Blog',
+    
 
 ];

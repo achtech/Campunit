@@ -9,7 +9,7 @@ Route::get('lang/{lang}', function ($lang) {
     return back();
 });
 Route::group(['middleware' => 'Lang'], function () {
-    Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home.index2');
+    Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home.index');
     Route::get('/profile', 'App\Http\Controllers\UserController@index')->name('clients.user.profile');
     
 });
