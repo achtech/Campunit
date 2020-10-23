@@ -32,7 +32,7 @@
 
 				<!-- Logo -->
 				<div id="logo">
-					<a href="index.html"><img src="images/logo-icon.png" alt=""></a>
+					<a href="/"><img src="images/logo-icon.png" alt=""></a>
 				</div>
 
 				<!-- Mobile Navigation -->
@@ -48,7 +48,7 @@
 				<nav id="navigation" class="style-1">
 					<ul id="responsive">
 
-						<li><a class="current" href="#">{{trans('front.menu_home')}}</a></li>
+						<li><a class="{{ $activePage == 'home' ? ' current' : '' }}" href="/">{{trans('front.menu_home')}}</a></li>
 								<li><a  href="#">{{trans('front.menu_rent')}}</a>
 									<ul>
 										@foreach($categories as $cat)
@@ -56,7 +56,7 @@
 										@endforeach
 									</ul>
 								</li>
-								<li><a href="/camper">{{trans('front.menu_insert_vehicule')}}</a></li>
+								<li><a class="{{ $activePage == 'camper' ? ' current' : '' }}" href="/camper">{{trans('front.menu_insert_vehicule')}}</a></li>
 
 								<li><a href="#">{{trans('front.menu_user_panel')}}</a>
 									<ul>
