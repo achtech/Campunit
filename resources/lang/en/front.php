@@ -80,5 +80,6 @@ return [
     'our_bloc'=>'From The Blog',
     'find_camper_now'=>'Find a camper now',
     'find_blog'=>'viw Blog',
+    'Reviews' => 'Review(s)',
 
 ];

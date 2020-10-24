@@ -41,8 +41,8 @@
 								</div>
 								<span class="like-icon"></span>
 							</div>
-							<div class="star-rating" data-rating="3.5">
-								<div class="rating-counter">(12 reviews)</div>
+							<div class="star-rating" data-rating="{{App\Http\Controllers\HomeController::getCamperRate($camper->id)}}">
+							{{App\Http\Controllers\HomeController::getCamperRate($camper->id)}}<div class="rating-counter">({{App\Http\Controllers\HomeController::getReviewsCount($camper->id)}} {{__('front.Reviews')}})</div>
 							</div>
 						</a>
 					</div>
@@ -73,9 +73,9 @@
 					<!-- Box -->
 					<div class="col-md-3 alternative-imagebox">
 						<a href="listings-list-with-sidebar.html" >
-							<img src="images/icon-campers/{{$category->image}}" alt="">
+						<img src="images/camper_categories/{{$category->image}}" alt="">
 							<h4>{{App\Http\Controllers\Controller::getLabelFromObject($category)}}</h4>
-							<span class="blog-item-tag">12 Listings</span>
+							<span class="blog-item-tag">{{App\Http\Controllers\HomeController::getListings($category->id)}} Listings</span>
 						</a>
 					</div>
 					
