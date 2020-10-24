@@ -22,7 +22,7 @@ return [
     */
     'menu_home' => 'Home',
     'menu_take-lease' => 'Take on lease',
-    'menu_insert_vehicule' => 'List your Camper',
+    'menu_insert_vehicule' => 'Rent out',
     'menu_magazine' => 'Magazine',
     'menu_login' => 'Login', 
     'menu_rent_motorhome' => 'Rent a motorhome',
@@ -51,6 +51,8 @@ return [
     'slider_location' =>'Location',
     'slider_categories' =>'All Categories',
     'slider_search' =>'Search',
+    'Rent out your vehicle or your equipment and insurance is included' => 'Rent out your vehicle or your equipment and insurance is included',
+    'Rent out Camper' => 'Rent out Camper',
 
     /*
     -----------------------Footer ----------
@@ -78,8 +80,68 @@ return [
     'choose_data_request'=>'If you have selected a camper, you will see all further details on the overview. Does the camper suit you? Then choose your preferred date and send the request to the landlord.',
     'receive_request'=>'Now you just need a little patience. As soon as the landlord has received your request, he can confirm it and nothing stands in the way of your camping holiday. Have fun with your adventure.',
     'our_bloc'=>'From The Blog',
-    'find_camper_now'=>'Find a camper now',
-    'find_blog'=>'viw Blog',
     'Reviews' => 'Review(s)',
 
+    /*
+    ---------------------- Rent out Camper page ------------------
+     */
+    'title_1' => 'Earn money with your camper',
+    'text_content_1_1' => 'Share your camper with people from all over the world. Campunite makes it as easy as possible for you. We offer simple means of payment such as PayPal, Visa and Mastercard. Read the steps and get started!',
+    'text_content_1_2' => 'Greetings to your Campunite team',
+    'learn_more' => 'Leanr more',
+    'title_2' => 'Create an account',
+    'text_content_2_1' => 'First you need a camper. You have a? Great then go ...',
+    'text_content_2_2' => 'Now create your account to get started. Fill in the details and start sharing your camper.',
+    'title_3' => 'Upload your camper',
+    'text_content_3' => "When you've created your account, you can start creating an entry for your camper. Let people know where to find your camper, show you some photos, and set a price.",
+    'title_4' => 'Done!',
+    'text_content_4' => 'Now all you have to do is wait. If someone is interested in serving campers, you will be notified and you can clarify details via the chat function if you wish.',
+    '' => '',
+
+
+    /*
+    ----------------------Login ------------------
+    */
+    'to_connect' => 'Log In',
+    'email_address' => 'Email address',
+    'password' => 'Password',
+    'or' => 'or',
+    'facebook_connexion' => 'Continue with Facebook',
+    'create_account' => 'You don t have an account yet?',
+    'register' => 'Register',
+    'create_an_account' => 'Create an Account',
+    'welcome' => 'Welcome to MyCamper',
+    'register_email_address' => 'Register with Email Address',
+    'register_facebook' => 'Register with Facebook',
+    'existed_account' => 'You already have an account?',
+    'forget_password' => 'Forgot password',
+    'register_with_email_address' => 'Register with email address',
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'email_add' => 'Email Address',
+    'agree' => 'Please confirm that you agree with our',
+    'and' => 'and',
+    'service_terms' => 'terms of service',
+    'privacy_policy' => 'Privacy Policy',
+    'sign_up' => 'Sign Up',
+    'minimum_length' => 'Minimum length: 8 characters',
+    'want_to_log' => 'You want to log in?',
+    'reset_password_link' => 'Send link to reset password',
+    'email' => 'E-mail:',
+    'email_address_already_used' => 'This email address is already used.',
+    'password' => 'Password:',
+    'password_requirment' => 'Password requirement:',
+    'capital_required' => 'Use at least 1 capital letter',
+    'terms_required' => 'Terms of Service:',
+    'mandatory_fields' => 'Not all mandatory fields have been filled in.',
+    'confirm_email_address' => 'Confirm email address',
+    'welcome_camp_unit' => 'Welcome To Camp Unit',
+    'hi' => 'Hi',
+    'confirm_registration' => 'Please click the button to confirm your email address and finalize your registration.',
+    'question_case' => ' In case of questions please write us an email at',
+    'contact_us' => 'or call us under 061 551 00 20. The MyCamper team gets back to you as quickly as possible.',
+    'best_regards' => 'Kind regards ',
+    'camp_team' => 'Your CamperUnit team ',
+    'address_verified' => 'Your email address has been successfully verified',
+    'verified_login' => 'Your email address has been successfully verified. You can now log in. We are looking forward to our journey together!'
 ];

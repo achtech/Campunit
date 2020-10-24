@@ -3,8 +3,7 @@
 
 <!-- Basic Page Needs
 ================================================== -->
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-<title>CampUnit</title>
+<title>lenovo</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -12,11 +11,10 @@
 ================================================== -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/main-color.css" id="colors">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<meta name="csrf-token" content="{{ csrf_token() }}">
+
 </head>
 
-<body class="transparent-header">
+<body>
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -34,7 +32,7 @@
 
 				<!-- Logo -->
 				<div id="logo">
-					<a href="/"><img src="images/logo-icon.png" data-sticky-logo="images/logo-icon.png" alt=""></a>
+					<a href="/"><img src="images/logo-icon.png" alt=""></a>
 				</div>
 
 				<!-- Mobile Navigation -->
@@ -51,35 +49,28 @@
 					<ul id="responsive">
 
 						<li><a class="{{ $activePage == 'home' ? ' current' : '' }}" href="/">{{trans('front.menu_home')}}</a></li>
-						<li><a  href="#">{{trans('front.menu_rent')}}</a>
-							<ul>
-								@foreach($categories as $cat)
-									<li><a href="index-3.html">{{App\Http\Controllers\Controller::getLabelFromObject($cat)}}</a></li>
-								@endforeach
-							</ul>
-						</li>
-						<li><a class="{{ $activePage == 'camper' ? ' current' : '' }}" href="/camper">{{trans('front.menu_insert_vehicule')}}</a></li>
+								<li><a  href="#">{{trans('front.menu_rent')}}</a>
+									<ul>
+										@foreach($categories as $cat)
+											<li><a href="index-3.html">{{App\Http\Controllers\Controller::getLabelFromObject($cat)}}</a></li>
+										@endforeach
+									</ul>
+								</li>
+								<li><a class="{{ $activePage == 'camper' ? ' current' : '' }}" href="/camper">{{trans('front.menu_insert_vehicule')}}</a></li>
 
-						<li><a href="#">{{trans('front.menu_user_panel')}}</a>
-							<ul>
-								<li><a href="dashboard-my-listings.html">{{trans('front.menu_panel_camper')}}</a></li>
-								<li><a href="dashboard-messages.html">{{trans('front.menu_panel_message')}}</a></li>
-								<li><a href="dashboard-messages.html">{{trans('front.menu_panel_notification')}}</a></li>
-								<li><a href="dashboard-bookings.html">{{trans('front.menu_panel_booking')}}</a></li>
-								<li><a href="dashboard-wallet.html">{{trans('front.menu_panel_wallet')}}</a></li>
-								<li><a href="dashboard-reviews.html">{{trans('front.menu_panel_review')}}</a></li>
-								<li><a href="{{route('clients.user.profile')}}">{{trans('front.menu_panel_profil')}}</a></li>
-								<li><a href="dashboard-my-profile.html">{{trans('front.menu_panel_logout')}}</a></li>
-								<li><a href="dashboard-invoice.html">{{trans('front.menu_panel_invoice')}}</a></li>
-							</ul>
-						</li>
-						
-						<li>
-							<a  id="myBtn">{{trans('front.menu_login')}}</a>
-									@include('connexion.login');
-						</li>
-						<li><a>{{trans('front.menu_register')}}</a></li>
-
+								<li><a href="#">{{trans('front.menu_user_panel')}}</a>
+									<ul>
+										<li><a href="dashboard-my-listings.html">{{trans('front.menu_panel_camper')}}</a></li>
+										<li><a href="dashboard-messages.html">{{trans('front.menu_panel_message')}}</a></li>
+										<li><a href="dashboard-messages.html">{{trans('front.menu_panel_notification')}}</a></li>
+										<li><a href="dashboard-bookings.html">{{trans('front.menu_panel_booking')}}</a></li>
+										<li><a href="dashboard-wallet.html">{{trans('front.menu_panel_wallet')}}</a></li>
+										<li><a href="dashboard-reviews.html">{{trans('front.menu_panel_review')}}</a></li>
+										<li><a href="{{route('clients.user.profile')}}">{{trans('front.menu_panel_profil')}}</a></li>
+										<li><a href="dashboard-my-profile.html">{{trans('front.menu_panel_logout')}}</a></li>
+										<li><a href="dashboard-invoice.html">{{trans('front.menu_panel_invoice')}}</a></li>
+									</ul>
+								</li>
 					</ul>
 				</nav>
 				<div class="clearfix"></div>
@@ -88,18 +79,20 @@
 			</div>
 			<!-- Left Side Content / End -->
 
-
-						<!-- Right Side Content / End -->
+			<!-- Right Side Content / End -->
 			<div class="right-side">
 				<div class="header-widget">
 					<a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim"><i class="sl sl-icon-login"></i> Sign In</a>
 					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang current">EN</a>
 					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang">DE</a>
 					<a href="dashboard-add-listing.html" class="button border with-icon min-width_lang">FR</a>
+
 				</div>
 			</div>
 			<!-- Right Side Content / End -->
 
+			<!-- Sign In Popup -->
+			<div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
 
 				<div class="small-dialog-header">
 					<h3>Sign In</h3>
@@ -199,10 +192,8 @@
 <!-- Header Container / End -->
 
 
-<!-- Banner
-================================================== -->
-@yield('banner')
 @yield('content')
+
 <!-- Footer
 ================================================== -->
 @include('footer')
@@ -215,6 +206,7 @@
 
 </div>
 <!-- Wrapper / End -->
+
 
 
 <!-- Scripts
@@ -232,6 +224,26 @@
 <script type="text/javascript" src="scripts/tooltips.min.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 
+<!-- Google Autocomplete -->
+<script>
+  function initAutocomplete() {
+    var input = document.getElementById('autocomplete-input');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+
+    autocomplete.addListener('place_changed', function() {
+      var place = autocomplete.getPlace();
+      if (!place.geometry) {
+        return;
+      }
+    });
+
+	if ($('.main-search-input-item')[0]) {
+	    setTimeout(function(){
+	        $(".pac-container").prependTo("#autocomplete-container");
+	    }, 300);
+	}
+}
+</script>
 
 <!-- Leaflet // Docs: https://leafletjs.com/ -->
 <script src="scripts/leaflet.min.js"></script>
@@ -241,115 +253,7 @@
 <script src="scripts/leaflet-gesture-handling.min.js"></script>
 <script src="scripts/leaflet-listeo.js"></script>
 
-<!-- Leaflet Geocoder + Search Autocomplete // Docs: https://github.com/perliedman/leaflet-control-geocoder -->
-<script src="scripts/leaflet-autocomplete.js"></script>
-<script src="scripts/leaflet-control-geocoder.js"></script>
-
-<script>
-	var modal = document.getElementById("myModal");
-	var btn = document.getElementById("myBtn");
-	var span = document.getElementsByClassName("close")[0];
-	btn.onclick = function() {
-	  modal.style.display = "block";
-	}
-	span.onclick = function() {
-	  modal.style.display = "none";
-	}
-	
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-	  if (event.target == modal) {
-		modal.style.display = "none";
-	  }
-	}
-	</script>
-	<script>
-		var registerModel = document.getElementById("registerModel");
-		var registerBtn = document.getElementById("register");
-		var registerAfterForgotPassword = document.getElementById("registerAfterForgotPassword");
-		registerAfterForgotPassword.onclick = function() {
-		  registerModel.style.display = "block";
-		}
-		var spanClose = document.getElementsByClassName("close-second-model")[0];
-		registerBtn.onclick = function() {
-		  registerModel.style.display = "block";
-		}
-		spanClose.onclick = function() {
-		  registerModel.style.display = "none";
-		}
-		window.onclick = function(event) {
-		  if (event.target == registerModel) {
-			registerModel.style.display = "none";
-		  }
-		}
-	</script>
-	<script>
-		var emailModel = document.getElementById("registerWithEmail");
-		var emailBtn = document.getElementById("registrationEmail");
-		var span = document.getElementsByClassName("close-third-model")[0];
-		var back=document.getElementsByClassName("go-back")[0];
-		emailBtn.onclick = function() {
-		  emailModel.style.display = "block";
-		}
-		span.onclick = function() {
-		  emailModel.style.display = "none";
-		}
-		back.onclick = function() {
-		  emailModel.style.display = "none";
-		}
-		window.onclick = function(event) {
-		  if (event.target == emailModel) {
-			emailModel.style.display = "none";
-		  }
-		}
-	</script>
-	<script>
-		var paswwordModel = document.getElementById("passwordModel");
-		var passwordBtn = document.getElementById("forget-password");
-		var span = document.getElementsByClassName("close-forget-password-model")[0];
-		var closePopup = document.getElementById("log_in");
-		passwordBtn.onclick = function() {
-		  paswwordModel.style.display = "block";
-		}
-		closePopup.onclick= function() {
-		  paswwordModel.style.display = "none";
-		}
-		span.onclick = function() {
-		  paswwordModel.style.display = "none";
-		}
-		window.onclick = function(event) {
-		  if (event.target == paswwordModel) {
-			paswwordModel.style.display = "none";
-		  }
-		}
-</script>
-<script>
-	$.ajaxSetup({
-  headers: {
-    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-  }
-});
-function showDiv() {
-	if(document.getElementById('client_name').value == "ouma"){
-		document.getElementById('signUpRequirments').style.display = "block";
-	}
-   
-}
-</script>
-	<!-- Typed Script -->
-<script type="text/javascript" src="scripts/typed.js"></script>
-<script>
-var typed = new Typed('.typed-words', {
-strings: [""," "," "],
-	typeSpeed: 80,
-	backSpeed: 80,
-	backDelay: 4000,
-	startDelay: 1000,
-	loop: true,
-	showCursor: true
-});
-</script>
-
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script>
 
 <!-- Style Switcher
 ================================================== -->
@@ -381,6 +285,7 @@ strings: [""," "," "],
 
 </div>
 <!-- Style Switcher / End -->
+
 
 </body>
 </html>
