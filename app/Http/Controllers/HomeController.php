@@ -9,8 +9,12 @@ class HomeController extends Controller
 {
     public function index(){
         $categories = DB::table('camper_categories')->paginate(10);
-        $campers = DB::table('campers')->paginate(10);
-        return view('home.index')->with('categories', $categories)->with('campers', $campers);
+        $campers = DB::table('campers')->where([
+            ['is_confirmed',1],
+            ['availability',2],
+            ])->paginate(10);
+        $blogs =  DB::table('blogs')->get();
+        return view('home.index')->with('blogs',$blogs)->with('categories', $categories)->with('campers', $campers);
     }
     public static function getReviewsCount($id){
         return DB::table('camper_reviews')->where('id_campers',$id)->count();
@@ -20,10 +24,10 @@ class HomeController extends Controller
         return $data? $data->rate : 0;
     }
     public static function getListings($id){
-        $data = DB::table('campers')->where([
+        return $data = DB::table('campers')->where([
             ['id_camper_categories',$id],
             ['is_confirmed',1],
-            ['availability',0],
+            ['availability',2],
             ])->count();
     }
 }

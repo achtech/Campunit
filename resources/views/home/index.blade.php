@@ -143,61 +143,26 @@
 
 		<div class="row">
 			<!-- Blog Post Item -->
+			@foreach($blogs as $blog)
 			<div class="col-md-4">
 				<a href="pages-blog-post.html" class="blog-compact-item-container">
 					<div class="blog-compact-item">
-						<img src="images/blog/blog1.jpg" alt="">
+						<img src="images/blog/{{$blog->photo}}" alt="">
 						<span class="blog-item-tag">Tips</span>
 						<div class="blog-compact-item-content">
 							<ul class="blog-post-tags">
-								<li>22 August 2019</li>
+								<li>{{$blog->created_at}}</li>
 							</ul>
-							<h3>Hotels for All Budgets</h3>
-							<p>Sed sed tristique nibh iam porta volutpat finibus. Donec in aliquet urneget mattis lorem. Pellentesque pellentesque.</p>
+							<h3>{{$blog->title}}</h3>
+							<p>{{$blog->article}}</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			<!-- Blog post Item / End -->
-
-			<!-- Blog Post Item -->
-			<div class="col-md-4">
-				<a href="pages-blog-post.html" class="blog-compact-item-container">
-					<div class="blog-compact-item">
-						<img src="images/blog/blog2.jpg" alt="">
-						<span class="blog-item-tag">Tips</span>
-						<div class="blog-compact-item-content">
-							<ul class="blog-post-tags">
-								<li>18 August 2019</li>
-							</ul>
-							<h3>The 50 Greatest Street Arts In London</h3>
-							<p>Sed sed tristique nibh iam porta volutpat finibus. Donec in aliquet urneget mattis lorem. Pellentesque pellentesque.</p>
-						</div>
-					</div>
-				</a>
-			</div>
-			<!-- Blog post Item / End -->
-
-			<!-- Blog Post Item -->
-			<div class="col-md-4">
-				<a href="pages-blog-post.html" class="blog-compact-item-container">
-					<div class="blog-compact-item">
-						<img src="images/blog/blog3.jpg" alt="">
-						<span class="blog-item-tag">Tips</span>
-						<div class="blog-compact-item-content">
-							<ul class="blog-post-tags">
-								<li>10 August 2019</li>
-							</ul>
-							<h3>The Best Cofee Shops In Sydney Neighborhoods</h3>
-							<p>Sed sed tristique nibh iam porta volutpat finibus. Donec in aliquet urneget mattis lorem. Pellentesque pellentesque.</p>
-						</div>
-					</div>
-				</a>
-			</div>
-			<!-- Blog post Item / End -->
+			@endforeach
 
 			<div class="col-md-12 centered-content">
-				<a href="pages-blog.html" class="button border margin-top-10">{{trans('front.find_blog')}}</a>
+				<a href="{{route('blog')}}" class="button border margin-top-10">{{trans('front.find_blog')}}</a>
 			</div>
 
 		</div>
